@@ -1,9 +1,11 @@
 
 body {
     border: 5px solid green;
+    display: flex;
+    margin: 0;
 }
 
-body > * {
+body>* {
     height: 100px;
     background-color: lightblue;
     border: 2px solid blue;
@@ -11,7 +13,39 @@ body > * {
 }
 
 main {
-} 
+    flex-grow: 1;
+}
 
-aside {
+
+@media screen and (max-width: 990px) {
+
+    body {
+        /* background-color: red; */
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 991px) {
+
+    body {
+        /* background: green; */
+    }
+
+    aside {
+        flex-basis: 20%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        /* background: blue; */
+        margin: 0 10%;
+    }
+
+    aside {
+        flex-basis: 30%;
+    }
 }
