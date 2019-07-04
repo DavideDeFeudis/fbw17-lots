@@ -1,0 +1,32 @@
+
+box-sizing: border-box
+margin
+padding
+border
+width (pixels, percent %)
+height (percent & viewport-unit vh)
+
+font-family
+font-size
+font-weight
+text-decoration
+
+color
+background-color
+
+list-style-type
+vertical-align
+
+border-radius
+display: block
+
+display: flex
+flex-direction: column
+flex-direction: row
+justify-content
+align-items
+flex-basis
+flex-grow
+flex-wrap
+
+

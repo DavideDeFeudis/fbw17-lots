@@ -1,0 +1,20 @@
+/*Use wrap so that the divs appear on multiple lines.
+Center the rows in the container*/
+
+/*solution block*/
+body {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+/*task */
+div {
+    height: 100px;
+    width: 100px;
+    /* flex-basis: 200px;  */
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+}

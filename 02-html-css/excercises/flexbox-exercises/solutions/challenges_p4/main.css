@@ -1,0 +1,43 @@
+
+/* my default rules (mobile) */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#flexy-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* tablet 
+  => overwrite flexbox properties from mobile to adapt to tablet 
+*/
+@media screen and (min-width: 600px) {
+  #flexy-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  aside {
+    flex-basis: 50%;
+  }
+}
+
+/* desktop 
+  => overwrite flexbox properties from mobile to adapt to desktop 
+*/
+@media screen and (min-width: 900px) {
+  #flexy-inner {
+    flex-direction: row;
+    flex-wrap: none;
+  }
+
+  #flexy-inner > * {
+    flex-basis: 33.33%;
+  }
+
+  .aside__1 {
+    order: -1;
+  }
+
+}

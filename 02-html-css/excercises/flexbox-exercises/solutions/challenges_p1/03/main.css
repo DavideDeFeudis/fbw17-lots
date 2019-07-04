@@ -1,0 +1,27 @@
+/* Use flexbox to display all the flex items in columns.
+Wrap all items.
+Set the alignment of the third item to center (using "align-self") */
+
+/* solution block */ 
+body {
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid;
+    height: 800px;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+#third {
+    align-self: center;
+}
+/* solution block end */ 
+
+div {
+    height: 100px;
+    width: 150px; 
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+}
