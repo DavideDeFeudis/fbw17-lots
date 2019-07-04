@@ -1,0 +1,75 @@
+body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, minmax(70px, auto));
+  /* The previous code line spans up 6 rows... 
+  but instead of all having the same height (1fr) I give them some range,
+  from a minimum height (at least 70px) up to the space the content 
+  actually needs (= auto).
+  The minmax function helps us doing exactly that */
+  
+  /* span up the layout */
+  grid-template-areas: 
+    "header header header header"
+    "main main main aside1"
+    "main main main aside1"
+    "main main main aside1"
+    "aside2 section section aside1"
+    "footer footer footer footer"
+}
+
+header, nav, .aside1, .aside2, main, section, footer {
+  border-radius: 10px;
+  padding: 10px;
+} /*you could also use instead: "body > *, nav {...}" as selector */
+
+header {
+  background: rgb(248, 249, 156);
+  grid-area: header;
+  padding: 0 0 0 10px; /*this will keep the left padding, 
+    but removes all other padding so the navbar can take up the full height
+    of the header element*/
+  display: flex;
+  justify-content: space-between;
+} 
+header > * {
+  flex-grow: 1; /* make the two header items (h1 and nav) share 
+    the exact same space  */
+}
+nav {
+  background: rgb(201, 169, 190);
+}
+nav > ul {
+  display: flex;
+  height: 100%; /* let the ul take up the whole nav element height, 
+    so we can easily bring its items to the center with the following line */
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* hide bullet lists */
+}
+nav > ul > li > a {
+  text-decoration: none; /* remove the underline from the links */
+} 
+.aside1 {
+  background: rgb(175, 221, 175);
+  grid-area: aside1;
+}
+.aside2 {
+  background: rgb(175, 221, 175);
+  grid-area: aside2;
+}
+main {
+  background:rgb(254, 226, 159);
+  grid-area: main;
+}
+section {
+  background: rgb(254, 143, 221);
+  grid-area: section;
+}
+footer {
+  background: rgb(201, 169, 190);
+  grid-area: footer;
+}

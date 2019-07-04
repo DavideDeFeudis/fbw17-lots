@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Twitter Clone</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column; /* OUTER CONTAINER (FLEXBOX) - let it flow from top to bottom  */
+      margin: 0;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex; /* INNER CONTAINER (holds two main blocks: MAIN & SECTION) 
+                        => they should flow next to each other */
+      border: 1px solid lightgrey;
+      flex-direction: row; /*LET THE TWO MAIN BLOCKS FLOW NEXT TO EACH OTHER */
+      flex-grow: 1; /* MAKE THE INNER FLEXBOX COVER ALL AVAILABLE SPACE (the footer gets a fixed amount of 15%)  */
+    }
+
+    .container > * {
+      flex-basis: 50%; /* BOTH BLOCKS SHOULD SHARE EXACTLY 50% OF THE AVAILABLE WIDTH */
+    }
+
+    .fa-twitter {
+      color: rgb(28, 160, 242); /* COLOR OUR TWITTER LOGO BLUE */
+    }
+
+    main {
+      background: linear-gradient(rgb(28, 160, 242), rgb(27, 149, 224)); /*APPLY SOME COLOR GRADIENT 
+                                                                        ON THE MAIN BOX*/
+      display: flex; /* MAKE THE MAIN BOX A FLEX CONTAINER 
+                        -> TO BE ABLE TO EASILY CENTER ITS CHILD ELEMENTS*/
+      justify-content: center;
+      align-items: center;
+    }
+
+    main>ul {
+      list-style-type: none; /*HIDE THE STANDARD BULLET POINTS OF THE LIST 
+        -> we want to have the icons as bullet points*/
+    }
+
+    main>ul>li {
+      padding: 15px 0; /* give the list lines a little bit of vertical space between each other */
+      color: white;
+    }
+
+    main>ul>li>i {
+      vertical-align: top; /* align the top of the icon with the top of the text  */
+      width: 50px; /* make all icons share the same width -> to have the same indentation for all text lines  */
+    }
+
+    main>ul>li>span {
+      font-weight: bold;
+    }
+
+    section {
+      display: flex; /* make the section a flexbox too, to center the children easily */
+      justify-content: center;
+      align-items: center;
+      padding: 0 8%; /* content is too big and will take all available width => let's add padding to prevent that */
+    }
+
+    .logo-flexline {
+      display: flex;
+      justify-content: space-between; /* push the twitter logo and the text beneath apart from each other */
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      border: 1px solid rgb(28, 160, 242);
+      border-radius: 20px; /* give the buttons rounded corners */
+      padding: 10px;
+      color: rgb(28, 160, 242);
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .btn-inverted {
+      background-color: rgb(28, 160, 242); /* let's define a class that makes blue buttons with white text */
+      color: white;
+    }
+
+    .btn-full-width {
+      display: block; /* let's define buttons that can take the full width of its parent */
+      width: 100%;
+    }
+
+    footer {
+      height: 15%;
+    }
+    footer ul {
+      list-style-type: none;
+      display: flex; /* make the list of links in the footer a flexbox. 
+            -> And make all the items wrap to the next line if there are too many */
+      flex-wrap: wrap; 
+      justify-content: center;
+    }
+    footer li {
+      font-size: 14px;
+      margin: 0 10px; /* add some fixed space in between the items. Justify-content with space will not work, because their are TOO MANY items, eating up all available space. So we need to asset some space the hard way with margin */
+    }
+    footer a {
+      text-decoration: none;
+      color: #ccc;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <ul>
+        <li>
+          <i class="fas fa-search fa-2x"></i>
+          <span>Folge deinen Interessen.</span>
+        </li>
+        <li>
+          <i class="fas fa-user-friends fa-2x"></i>
+          <span>Hör dir an, worüber sich andere unterhalten.</span>
+        </li>
+        <li>
+          <i class="far fa-comment fa-2x"></i>
+          <span>Beteilige dich an der Unterhaltung!</span>
+        </li>
+      </ul>
+    </main>
+    <section>
+      <div>
+        <div class="logo-flexline">
+          <i class="fab fa-twitter fa-3x"></i>
+          <a class="btn">Anmelden</a>
+        </div>
+        <h1>Finde heraus, was gerade in der Welt los ist</h1>
+        <h3>Melde dich noch heute bei Twitter an.</h3>
+        <a class="btn btn-inverted btn-full-width">Registrieren</a>
+        <a class="btn btn-full-width">Anmelden</a>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <ul>
+        <li><a href="">Über uns</a></li>
+        <li><a href="">Hilfe-Center</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Status</a></li>
+        <li><a href="">Jobs</a></li>
+        <li><a href="">Bedingungen</a></li>
+        <li><a href="">Datenschutzrichtlinien</a></li>
+        <li><a href="">Impressum</a></li>
+        <li><a href="">Cookies</a></li>
+        <li><a href="">Info zu Anzeigen</a></li>
+        <li><a href="">Marke</a></li>
+        <li><a href="">Apps</a></li>
+        <li><a href="">Werben</a></li>
+        <li><a href="">Marketing</a></li>
+        <li><a href="">Unternehmen</a></li>
+        <li><a href="">Entwickler</a></li>
+        <li><a href="">Adressbuch</a></li>
+        <li><a href="">Einstellungen</a></li>
+        <li><a href="">&copy; 2019 Twitter</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
