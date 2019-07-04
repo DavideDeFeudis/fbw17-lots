@@ -4,13 +4,16 @@ body {
 }
 
 .c0 {
+    border: 2px solid red;
     display: flex;
-    flex-flow: row wrap; /* flex-flow is a shortcut: 
+    flex-flow: row wrap;
+    /* flex-flow is a shortcut: 
                             It combines "flex-direction" and "flex-wrap" */
 }
 
-.c0 {
-    border: 2px solid red;
+.c0>div {
+    height: 130px;
+    width: 100vw;
 }
 
 .c1 {
@@ -41,4 +44,26 @@ body {
     background-color: red;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
+    .c3,
+    .c4,
+    .c5 {
+        /* background-color: black; */
+        flex-basis: 33.33%;
+        /* fallback if calc not supported */
+        flex-basis: calc(100% / 3);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .c1, .c2, .c6, .c7 {
+        /* background-color: black; */
+        flex-basis: 50%;
+    }
+    .c3, .c4, .c5 {
+        /* background-color: black; */
+        flex-basis: 33.33%;
+        flex-basis: calc(100% / 3);
+    }
+}
