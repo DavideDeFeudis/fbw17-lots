@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background: grey;
+        height: 100vh;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #container {
+        display: flex;
+        border: 1px solid black;
+        flex-direction: column;
+        height: 180px;
+      }
+      #container > * {
+        border: 1px solid;
+      }
+      header {
+        flex-basis: 33%;
+      }
+
+      #container-child {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      #container-child > * {
+        flex-grow: 1;
+      }
+
+      header {
+        background-color: blue;
+      }
+      main {
+        background-color: pink;
+      }
+      footer {
+        background-color: green;
+      }
+
+      @media only screen and (min-width: 500px) {
+        #container {
+          flex-direction: row;
+        }
+        header {
+          flex-basis: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>1</header>
+      <div id="container-child">
+        <main>2</main>
+        <footer>3</footer>
+      </div>
+    </div>
+  </body>
+</html>
