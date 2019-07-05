@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            /* remove in the mobile version */
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .container>* {
+            flex-basis: 50%;
+        }
+
+        .container span {
+            padding-left: 20px;
+        }
+
+        main {
+            background: linear-gradient(rgb(28, 160, 242), rgb(27, 149, 224));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            height: 7%;
+        }
+
+        .fa-twitter {
+            color: rgb(28, 160, 242);
+        }
+
+        main>ul {
+            list-style-type: none;
+        }
+
+        main>ul>li {
+            padding: 15px 0;
+            color: white;
+        }
+
+        main>ul>li>i {
+            vertical-align: middle;
+            width: 50px;
+        }
+
+        .btn {
+            font-size: .7em;
+            border: 1px solid rgb(28, 160, 242);
+            border-radius: 25px;
+            padding: 15px;
+            color: rgb(28, 160, 242);
+        }
+
+        .sign-up-big-btn {
+            display: block;
+            padding: 10px;
+            margin-bottom: 20px;
+            background: rgb(28, 160, 242);
+            color: white;
+            text-align: center;
+        }
+
+        .log-in-big-btn {
+            display: block;
+            padding: 10px;
+            color: rgb(28, 160, 242);
+            text-align: center;
+
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-container2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h4 {
+            padding-top: 40px;
+        }
+
+        footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none; /* removes markers */
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        footer li {
+            display: inline;
+            color: grey;
+            font-size: .7em;
+            padding: 5px 15px;
+        }
+
+       
+
+
+        @media screen and (max-width: 1024px) {
+            body {
+                height: auto;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+            }
+
+            section {
+                margin: 20px;
+            }
+
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <ul>
+                <li>
+                    <i class="fas fa-search fa-2x"></i>
+                    <span>Follow your interests.</span>
+                </li>
+                <li>
+                    <i class="fas fa-user-friends fa-2x"></i>
+                    <span>Hear what people are talking about.</span>
+                </li>
+                <li>
+                    <i class="far fa-comment fa-2x"></i>
+                    <span>Join the conversation.</span>
+                </li>
+            </ul>
+        </main>
+        <section>
+            <div class="section-container1">
+                <div class="section-container2">
+                    <i class="fab fa-twitter fa-2x"></i>
+                    <a class="btn small-btn">Log in</a>
+                </div>
+
+                <h1>See what’s happening in<br>the world right now</h1>
+                <h4>Join Twitter today.</h4>
+                <a class="btn sign-up-big-btn">Sign Up</a>
+                <a class="btn log-in-big-btn">Log in</a>
+            </div>
+
+        </section>
+    </div>
+    <footer>
+        <ul>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            <li>Footer link</li>
+            
+        </ul>
+    </footer>
+</body>
+
+</html>
