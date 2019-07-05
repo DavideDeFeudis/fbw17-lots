@@ -1,0 +1,45 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    border: 5px solid green;
+    font-size: 3rem;
+}
+
+body > * {
+    background-color: lightblue;
+    border: 2px solid blue;
+    text-align: center;
+}
+
+main {
+    flex-basis: 100%;
+} 
+
+aside {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    aside {
+        display: block;
+        flex-basis: 20%;
+    }
+}
+@media screen and (min-width: 900px) {
+    aside {
+        flex-basis: 30%;
+    }
+    body {
+        margin: 0 10%;
+    }
+}
