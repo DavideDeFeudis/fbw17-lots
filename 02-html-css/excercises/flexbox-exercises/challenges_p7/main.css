@@ -2,11 +2,25 @@
 body {
   border: 5px solid green;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
 }
 
 body > * {
   background-color: lightblue;
   border: 2px solid blue;
   text-align: center;
+}
+
+header {
+  flex-basis: 100px;
+}
+main {
+  flex-grow: 1;
+}
+footer {
+  flex-basis: 20%;
 }
 
