@@ -25,6 +25,9 @@
 // }
 // returns: 1245
 
+
+
+
 // NESTED ARRAYS AND FOR LOOPS
 
 // print age:
@@ -113,9 +116,18 @@
 // CHRISTMAS TREE
 
 // let str = "*";
-// for (i = 0; i <= 10; i++) {
+// for (i = 1; i <= 10; i++) {
 //     console.log(str.repeat(i));
 // }
+
+
+// another way to do it. also printing on the same line using a comma
+
+// for (i = 1; i <= 6; i++) {
+//     console.log(i, "*".repeat(i));
+// }
+// console.log("i is now: " + i); 
+// this doesnt work if we write let i cause the scope changes
 
 
 // var str = "*";
@@ -124,16 +136,53 @@
 //     str = str + "*";
 // }
 
-// or:
-
 // var str = "";
 // for (i = 1; i <= 10; i++) {
 //     str = str + "*";
 //     console.log(str);
 // }
 
+// for (i = 0; i <= 10; i+=2) {
+//     console.log(i);
+// }
 
-// NESTED ARRAYS
+
+// var str = "";
+// for (i = 0; i < 4; i++) {
+//     str += "*";
+//     console.log(i+1);
+//     console.log(str);
+// }
+
+// SAME WITH NESTED LOOP
+
+// var str = "";
+// for (i = 0; i < 4; i++) {
+//     for (j = 0; j < i + 1; j++) {
+//         str += "*";
+//     }
+//     console.log(i + 1);
+//     console.log(str);
+//     str = "";
+// }
+
+
+// for (i = 1; i < 5; i++) {
+//     let str = "";
+//     for (j = 0; j < i; j++) {
+//         str += "*";
+//         // console.log(j);
+//     }
+//     // console.log(i);
+//     console.log(str);
+// }
+
+
+
+
+
+
+// NESTED ARRAYS AND LOOPS
 
 // let parent = [];
 // let child = [];
@@ -179,16 +228,60 @@
 // try with string concat, it should behave differently
 
 
-// to do: parent = [[0],[0, 1]]
-var parent = [];
 
-for (i = 0; i < 2; i++) {
-    var child = [];
-    child.push(i);
-    for (j = 0; j < 2; j++) {
-        parent.push(child);
-    }
-}
+
+
+
+// SIMILAR EXAMPLE OF ARRAY AS REFERENCE TYPE
+
+
+// you push actually the original (reference) to this array, not a copy.
+// This means: When you update the original array (child) the child reference in the parent array will be updated too.
+
+// var toAdd = [0];
+// var arr = [];
+
+// arr.push(toAdd); 
+// this will add the array BY REFERENCE. Any updates on array "toAdd" will change "arr" too!
+// console.log(arr); 
+// => [ [0] ]
+
+// toAdd.push(1);  
+// we change toAdd. This has immediate consequences for arr too
+// console.log(arr); 
+// => [ [0, 1] ]
+
+
+
+// You can avoid that by creating a copy of the array before pushing it.
+// The easiest way to solve that is with the spread operator:
+
+// var toAdd = [0];
+// var arr = [];
+
+// arr.push([...toAdd]); 
+// spread operator: creates a copy of the array
+// console.log(arr);
+
+// toAdd.push(1); 
+// console.log(arr);
+
+
+
+
+
+
+
+// to do: parent = [[0],[0, 1]]
+// var parent = [];
+
+// for (i = 0; i < 2; i++) {
+//     var child = [];
+//     child.push(i);
+//     for (j = 0; j < 2; j++) {
+//         parent.push(child);
+//     }
+// }
 // console.log(parent);
 // child not updated cause only scope in loop?
 
@@ -248,18 +341,19 @@ for (i = 0; i < 2; i++) {
 
 
 
+// output [ [ 2, 1, 0 ], [ 1, 0 ], [ 0 ] ]
+// output [ [ 0, 1, 2 ], [ 0, 1 ], [ 0 ] ]
 
+// var parent = [];
 
-var parent = [];
-
-for (i = 0; i < 3; i++) {
-    var child = [];
-    for (j = i; j < 3; j++) {
-        child.push(j);
-    }
-    parent.push(child);
-}
-console.log(parent);
+// for (i = 0; i < 3; i++) {
+//     var child = [];
+//     for (j = i; j < 3; j++) {
+//         child.push(j);
+//     }
+//     parent.push(child);
+// }
+// console.log(parent);
 
 
 
@@ -285,3 +379,51 @@ console.log(parent);
 // }
 
 
+// https://stackoverflow.com/questions/36413159/understanding-nested-for-loops-in-javascript
+
+// var nums = [[1,2,3], [4,5,6], [7,8,9]];
+
+// console.log('The array data: ', JSON.stringify(nums));
+
+// for (var i=0; i < nums.length; i++) {
+//   // Main/"top" array - accessing via "arr[i]"
+//   for (var j=0; j < nums[i].length; j++) {
+//     // here we loop through the "child" arrays
+//     let helpfulLabel = `nums[${i}][${j}]`
+//     let value = nums[i][j]
+//     console.log(helpfulLabel, 'Value=' + value);
+//   }
+// }
+
+// var letters = [['a', 'b', 'c'], ['d', 'e', 'f'], ['x', 'y', 'z']];
+// console.log('The array data: ', JSON.stringify(letters));
+
+// for (var i=0; i < letters.length; i++) {
+//   for (var j=0; j < letters[i].length; j++) {
+//     let helpfulLabel = `letters[${i}][${j}]`
+//     let value = letters[i][j]
+//     console.log(helpfulLabel, 'Value=' + value);
+//   }
+// }
+
+
+
+//Create your function below this line.
+/* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+bmi should equal around 20 in this case.
+*/
+
+// function bmiCalculator(weight, height) {
+//     let bmi = Math.floor(weight / Math.pow(height, 2));
+//     let interpretation = ""; 
+//     if (bmi<18.5) {
+//         interpretation = "underweight.";
+//     } else if (bmi<24.9) {
+//         interpretation = "normal.";
+//     } else {
+//         interpretation = "overweight.";
+//     }
+//     return "your BMI is: " + bmi + " You are " + interpretation;;
+// }
+
+// console.log(bmiCalculator(58, 1.74));
