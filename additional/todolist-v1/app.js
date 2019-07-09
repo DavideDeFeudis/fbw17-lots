@@ -6,54 +6,39 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+var items = ['item1', 'item2'];
+
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 app.get('/', function (req, res) {
 
     var today = new Date();
-    var dayNum = today.getDay();
-    var dayStr = '';
 
-    switch (dayNum) {
-        case 0:
-            dayStr = "sun";
-            break;
-        case 1:
-            dayStr = "mon";
-            break;
-        case 2:
-            dayStr = "tue";
-            break;
-        case 3:
-            dayStr = "wed";
-            break;
-        case 4:
-            dayStr = "thu";
-            break;
-        case 5:
-            dayStr = "fri";
-            break;
-        case 6:
-            dayStr = "sat";
-            break;
-        default:
-        dayStr = "error: day number = " + dayNum;
+    var options = {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long'
     }
 
+    var formattedDay = today.toLocaleDateString('en-US', options);
+
     res.render('list', {
-        day: dayStr
+        day: formattedDay,
+        items: items
     });
 
+});
+
+
+app.post("/", function(req, res) {
+    items.push(req.body.item);
+    res.redirect('/');
 });
 
 // app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 // console.log(__dirname);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
-
-// app.use(bodyParser.urlencoded({extended: true}));
-
-// app.post('/', function(req, res) {
-//     console.log(req.body);
-//     res.send('test posted');
-// });

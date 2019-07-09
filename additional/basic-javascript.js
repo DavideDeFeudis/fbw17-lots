@@ -444,3 +444,24 @@ bmi should equal around 20 in this case.
 // for (let i = 1; i <= 100; i++) {
 //     console.log(fizzBuzz(i));
 // }
+
+
+
+// SHORTCUTS
+// 
+// console.log: log tab
+// ctrl shift P: open shortcuts menu
+
+
+
+
+
+
+// FUNCTION SHORTHAND - ARROW FUNCTIONS
+
+// let sum = (a, b) => {
+//     return a + b;
+// }
+// console.log(sum(1, 2));
+
+
