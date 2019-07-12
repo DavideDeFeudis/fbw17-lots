@@ -465,3 +465,60 @@ bmi should equal around 20 in this case.
 // console.log(sum(1, 2));
 
 
+// let account = {
+//     balance: 1000,
+//     pin: 1234
+// }
+
+
+// function getCash(amount, pinProvided) {
+
+//     if (pinProvided !== account.pin) {
+//         console.log("wrong pin");
+//     } else if (amount > account.balance) {
+//         console.log("your residual credit is euro " + account.balance);
+//     } else {
+//         console.log("here are your euro " + amount);
+//         account.balance -= amount;
+//     }
+
+// }
+
+// getCash(100, 15234);
+// getCash(1200, 1234);
+// getCash(100, 1234);
+// console.log(account.balance);
+
+
+
+let accounts = {
+    john: {
+        balance: 1000,
+        pin: 1234
+    },
+    anna: {
+        balance: 2000,
+        pin: 5678
+    }
+};
+
+
+let accountName = "john";
+console.log(accounts.accountName.pin);
+
+function withdraw(amount, pinProvided, accountName) {
+
+    if (pinProvided !== accounts.accountName.pin) {
+        console.log("wrong pin");
+    } else if (amount > accounts.accountName.balance) {
+        console.log("error: residual credit is " + accounts.accountName.balance);
+    } else {
+        console.log("success");
+        accounts.accountName.balance -= amount;
+    }
+
+}
+
+// withdraw(100, 15234, "john");
+// withdraw(1200, 1234, "john");
+// withdraw(100, 1234, "john");
