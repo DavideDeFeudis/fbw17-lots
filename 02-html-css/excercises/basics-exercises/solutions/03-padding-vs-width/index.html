@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Padding vs width</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    div {
+      border: 1px solid;
+    }
+
+    #outer1 {
+      padding: 10px 20%;
+    }
+
+    #inner1 {
+      background: yellow;
+    }
+
+    #outer2 {
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #inner2 {
+      background: red;
+      min-width: 60%;
+      max-width: 90%;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="outer1">
+    <div id="inner1">
+      Inner - fixed outer padding
+      Inner - fixed outer padding
+    </div>
+  </div>
+
+  <div id="outer2">
+    <div id="inner2">
+      Inner - collapsing padding left and right
+      Inner - collapsing padding left and right
+    </div>
+  </div>
+</body>
+
+</html>

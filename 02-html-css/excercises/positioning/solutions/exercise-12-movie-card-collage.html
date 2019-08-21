@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning #12 - The card collection</title>
+  <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <style>
+    
+    body {
+      margin: 0;
+      background-color: #F5F3F4;
+    }
+
+    .wrapper {
+      width: 60vw;
+      height: 100vh;
+      margin: 0 auto;
+      background-color: black;
+      position: relative;
+    }
+
+    .img-box {
+      width: 30%;
+      height: 12.5rem;
+      margin-top: 3em;
+
+        /* the following two lines gives each image a white frame */
+      border: 7px solid white;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+
+
+      position: absolute;
+
+      /* generic background settings */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* image 1 */
+    .img-box:nth-child(1) {
+      background-image: url(http://tvseriesfinale.com/wp-content/uploads/2016/06/Stranger-Things-TV-show-on-Netflix-season-1-canceled-or-renewed-590x332.jpg);
+      left: -1%;
+      transform: rotateZ(-5deg);
+    }
+
+    /* image 2 */
+    .img-box:nth-child(2) {
+      background-image: url(https://i.kinja-img.com/gawker-media/image/upload/tc70tbrbumkj6otvimc6.jpg);
+      left: 20%;
+      transform: rotateZ(-2deg);
+
+      z-index: 2;
+    }
+
+    /* image 3 */
+    .img-box:nth-child(3) {
+      background-image: url(https://cdn2.cnet.com/img/ZBsvGx4ssPp6hqjbUrkFAYH-U_Y=/970x0/2016/07/27/69f55bac-baf8-43c1-b0dd-7ab2adc78bf0/stranger-things.jpg);
+      left: 44%;
+      transform: rotateZ(-6deg);
+
+      z-index: 1;
+    }
+
+    /* image 4 */
+    .img-box:nth-child(4) {
+      background-image: url(http://www.lashorasperdidas.com/wp-content/uploads/2016/06/stranger-things.jpg);
+      transform: rotateZ(6deg);
+      right: -1%;
+    }
+
+    .img-box:hover {
+      z-index: 100; /* make sure it gets on top of everything else */ 
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+    <div class="img-box"></div>
+  </div>
+
+</body>
+
+</html>

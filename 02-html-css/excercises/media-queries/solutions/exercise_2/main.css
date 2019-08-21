@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    background-color: rgba(255, 255, 0, 0.562);
+    padding: 5px;
+}
+
+h2 {
+    height: 25px;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+article {
+    background-color: rgba(0, 0, 255, 0.507);
+    width: 100%;
+    padding: 10px;
+    border-bottom: 5px solid black;
+}
+
+@media only screen and (min-width: 600px) {
+    
+    article {
+        display: inline-block; /* make the posts inline blocks so they can flow next to each other */
+        vertical-align: top; /* align the inline-blocks at the top of their parent */
+        width: 49%; /* we cannot take 50% here, because the "space" in between the boxes
+            also takes a share of the 100%. So there is not enough for two 50% boxes + the space.
+            We give it a little less width, so that the space has some room left.  
+            */
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    article {
+        width: 33%; /* shrink the boxes width so all three have enough space 
+                    to go next to each other on one line*/
+    }
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #7 - Positioning</title>
+  <style>
+    .img-lines {
+      background-image: url(https://www.visitberlin.de/system/files/styles/visitberlin_teaser_single_visitberlin_mobile_1x/private/image/Fernsehturm_iStock_c_bluejayphoto_DL_PPT_0.jpg?h=cbc5e7bf&itok=MfN7PE-c);
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* common styles for my two white lines (pseudos) */
+    .img-lines::before, .img-lines::after {
+      content: '';
+      border: 1px solid white; 
+      position: absolute;
+    }
+
+    /* span a horizontal line by providing left & right and the bottom offset */
+    .img-lines::before {
+      left: 1em;
+      right: 1em;
+      bottom: 1.5em;
+    }
+
+/* span a vertical line by providing top & bottom and the right offset */
+    .img-lines::after {
+      top: 1em;
+      bottom: 1em;
+      right: 2em;
+    }
+
+    h2 {
+      background: yellow;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudo elements + position absolute #2</h1>
+
+  <p>Please position the heading title like in the reference image. 
+      Also create the two white crossing lines with pseudo elements before and after.
+      Good luck!</p>
+  
+  <div class="img-lines">
+    <h2>Hello Berlin</h2>
+  </div>
+  
+</body>
+
+</html>

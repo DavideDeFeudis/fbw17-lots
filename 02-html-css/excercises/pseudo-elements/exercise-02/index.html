@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pseudo elements - exercise 2</title>
+  <style>
+
+    ul.link-list {
+      margin-bottom: 20vh;
+    }
+
+    ul.link-list li {
+      padding: 10px;
+    }
+
+    .file-icons {
+      display: flex;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <h1>Pseudo elements #2</h1>
+
+  <p>Position the proper icon right to the link text - depending on the file type in the link.</p>
+  <p>Use the pseudo element "after" for this. Each one needs to get assigned the icon as background-image</p>
+  <p>To position the icon right next to the next use display inline-block and vertical-align</p>
+  <p>You need three pseudo element selectors - one for each file type.</p>
+
+  <ul class="link-list">
+    <li><a href="someFile.pdf">File1.pdf</a></li>
+    <li><a href="someFile.xls">File2.xls</a></li>
+    <li><a href="someFile.doc">File3.doc</a></li>
+    <li><a href="someFile.doc">File4.doc</a></li>
+    <li><a href="someFile.pdf">File5.pdf</a></li>
+  </ul>
+
+  <div class="file-icons">
+  <img title="PDF" src="https://img.icons8.com/officel/64/000000/pdf.png"> 
+  <img title="MS Word" src="https://img.icons8.com/dusk/64/000000/ms-word.png"> 
+  <img title="MS Excel" src="https://img.icons8.com/dusk/64/000000/ms-excel.png"> 
+  </div>
+
+
+</body>
+</html>

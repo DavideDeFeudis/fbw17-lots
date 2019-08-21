@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning</title>
+  <style>
+
+    body {
+      margin: 20vh;
+    }
+
+    img {
+      width: 200px;
+      margin-right: 30px;
+    }
+
+
+    #image-container-one :nth-child(2) {
+      position: relative;
+      top: -20px;
+    }
+
+    #image-container-two :nth-child(2) {
+      position: relative;
+      top: 20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div id="image-container-one">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+  </div>
+
+  <div id="image-container-two">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2014/10/19/21/36/kirchsee-494734_960_720.jpg" alt="">
+  </div>
+
+
+</body>
+
+</html>

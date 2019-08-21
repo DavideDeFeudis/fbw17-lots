@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #7 - Positioning</title>
+  <style>
+
+    .img-lines {
+      background-image: url(https://www.visitberlin.de/system/files/styles/visitberlin_teaser_single_visitberlin_mobile_1x/private/image/Fernsehturm_iStock_c_bluejayphoto_DL_PPT_0.jpg?h=cbc5e7bf&itok=MfN7PE-c);
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+      z-index: 0;
+    }
+
+    .img-lines::before {
+      content: '';
+    }
+
+    .img-lines::after {
+      content: '';
+    }
+
+    h2 {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudo elements + position absolute #2</h1>
+
+  <p>Please position the heading title like in the reference image. 
+    Also create the two white crossing lines with pseudo elements before and after.
+    Good luck!</p>
+
+  <div class="img-lines">
+    <h2>Hello Berlin</h2>
+  </div>
+</body>
+
+</html>

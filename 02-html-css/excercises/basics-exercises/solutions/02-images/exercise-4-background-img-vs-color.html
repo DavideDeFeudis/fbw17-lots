@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Images Exercise #4 - The big clash - bg-img vs bg-color</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #bg-collection {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #bg-collection>div {
+      margin: 10px;
+
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      border: 20px dashed black;
+
+      font-size: 0.8rem;
+      text-align: center;
+
+      background-color: yellow;
+    }
+
+    #bg-4,
+    #bg-5,
+    #bg-6,
+    #bg-7 {
+      background-image: url(//unsplash.it/150/150);
+
+      color: black;
+      font-weight: 900;
+      /* makes it easier to read on images */
+    }
+
+    #bg-2 {
+      background-clip: content-box;
+    }
+
+    #bg-3 {
+      background-clip: padding-box;
+    }
+
+    #bg-4 {
+      background-size: cover;
+    }
+
+    #bg-5 {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #bg-6 {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+    }
+
+    #bg-7 {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="bg-collection">
+    <div id="bg-1">
+      Just bg-color
+    </div>
+    <div id="bg-2">
+      Color just on content
+    </div>
+    <div id="bg-3">
+      Color on padding and content
+    </div>
+    <div id="bg-4">
+      bg-image with repeat
+    </div>
+    <div id="bg-5">
+      bg-imgage without repeat
+    </div>
+    <div id="bg-6">
+      bg-image just on content
+    </div>
+    <div id="bg-7">
+      bg-img everywhere (incl. border)
+    </div>
+  </div>
+
+</body>
+
+</html>

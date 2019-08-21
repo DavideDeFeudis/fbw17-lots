@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Challenge P8</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* FLEX CONTAINER */
+      #container {
+        display: flex;
+        flex-direction: column; /* we want the items 
+          flow in column direction. Together with wrap we can 
+          create TWO columns */
+        flex-wrap: wrap; 
+        /* We need wrapping 
+          to push items into the next / second column */
+        height: 300px;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        margin: 0 10%; /* set some margin left and right */
+      }
+
+      /* FLEX CHILDREN */
+      #container > header {
+        background-color: rgb(3, 162, 254); /* blue */
+        flex-basis: 100%; /* header should take all available height
+          and push all other elements to the next column 
+          (which only works when flex-wrap is on!) */
+      }
+      #container > main {
+        background-color: rgb(239, 95, 167); /* magenta */
+        flex-basis: 50%;
+      }
+      #container > footer {
+        background-color: rgb(96, 216, 54); /* green */
+        flex-basis: 50%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+      
+      <header>1</header>
+      <main>2</main>
+      <footer>3</footer>
+    
+    </div>
+
+  </body>
+</html>

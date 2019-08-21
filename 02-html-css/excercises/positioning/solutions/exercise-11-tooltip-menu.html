@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning # - The tooltip</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style>
+
+    body {
+      margin: 0;
+      height: 100vh;
+
+      background: #f1f1f1;
+      font-family: sans-serif;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav > .icon {
+      flex-basis: 100px;
+      text-align: center;
+    }
+
+    .icon i {
+      font-size: 3rem;
+      display: block; /* make it cover the whole width */
+      margin-bottom: 15px;
+    }
+
+    .icon span {
+      background: black;
+      color: white;
+      padding: 5px;
+      border-radius: 10px;
+      display: block; /* make it cover the whole width */
+      position: relative; /* make the span a relative container 
+        so we can attach a pseudo element absolutely to it */
+      visibility: hidden;
+    }
+
+    .icon span::after {
+      content: '';
+      background: black;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      z-index: -1;
+    }
+
+    .icon:hover span {
+      visibility: visible;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="icon">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </div>
+    <div class="icon">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <span>Upload</span>
+    </div>
+    <div class="icon">
+      <i class="far fa-image"></i>
+      <span>Images</span>
+    </div>
+    <div class="icon">
+      <i class="fas fa-cog"></i>
+      <span>Settings</span>
+    </div>
+
+  </nav>
+
+</body>
+
+</html>

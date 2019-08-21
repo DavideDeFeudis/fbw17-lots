@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning # - Folder corners</title>
+  <style>
+
+    body, p {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      line-height: 1.4em;
+      background: #fff;
+    }
+
+    /* the container box */
+    .container {
+      color: #fff;
+      background: #97C02F;
+      padding: 40px;
+      margin: 2em 10%;
+      
+      /* we hide here all overflow of the shadow that goes outside the container */
+      overflow: hidden;
+    }
+
+    /* the folded corner */
+    .container:before {
+      content: "";
+
+      /* triangle trick: insert a triangle in the corner with usage of borders */
+      
+      /* use following color for the folded corner: rgb(30, 36, 19) */
+      /* set the non-used borders to WHITE */
+
+      /* create a box shadow for the folded corner so it gets some depth effect 
+        Use a very slight one of 2-3 pixels, together with transparency (rgba)
+        => use for all this the box-shadow property here
+      */
+
+      /* position the folded item on the top right corner of its container */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar rhoncus risus, vel ornare lacus sagittis
+      sit amet. Duis vel sem magna. Proin pulvinar velit eleifend ligula ultrices vestibulum. Nunc posuere dolor eu
+      mauris feugiat dignissim.</p>
+  </div>
+
+</body>
+
+</html>

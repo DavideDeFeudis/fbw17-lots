@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise 1 - Positioning</title>
+  <style>
+    
+    body * {
+      box-sizing: border-box;
+    }
+
+    div {
+      width: 600px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+      top: 200px;
+    }
+
+    .green-border {
+      border: 10px green dotted;
+    }
+
+    .image-scale {
+      width: 200px;
+      height: 200px;
+    }
+
+    .cat {
+      position: absolute;
+      top: -50%;
+      left: -70px;
+    }
+
+    .dog {
+      position: absolute;
+      bottom: -10px;
+      right: -70px;
+    }
+  </style>
+</head>
+
+<body>
+  <main role="main">
+    <div class="green-border">
+      <img src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/spacecat.png"
+        alt="space cat" class="image-scale cat">
+      <img src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/spacedog.png"
+        alt="space dog" class="image-scale dog">
+      </div>
+  </main>
+
+</body>
+
+</html>

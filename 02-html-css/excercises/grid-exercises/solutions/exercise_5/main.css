@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(red, orange);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    display: grid; 
+        /* note: when we just want to stack items, we do not need grid-template-columns at all! */
+    height: 100vh;
+    color: white;
+}
+
+/* center the text in all children of the grid
+     The easiest way is to make all children flexboxes */
+#container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* increase the font-size a bit */
+}
+
+header {
+    background-color: rgb(3, 162, 254); /*blue*/
+}
+main {
+    background-color: rgb(239, 95, 167); /*pink*/
+}
+footer {
+    background-color: rgb(96, 216, 54); /*green*/
+}
+
+/* tablet view and above */
+@media screen and (min-width: 600px) {
+
+    #container {
+      grid-template-columns: repeat(2, 1fr); /* now create explicitly TWO columns */
+    }
+    header {
+      grid-row: 1 / span 2; /* span the header item on two rows. 
+            The other items main and footer will automatically fill into the remaining space in the grid */
+    }
+}
+

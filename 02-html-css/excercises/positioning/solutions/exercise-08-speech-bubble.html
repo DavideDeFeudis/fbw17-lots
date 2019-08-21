@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning #8 - The Speech Bubble</title>
+  <style>
+
+    body {
+      background: #e5e5e5;
+    }
+
+    .quote-container {
+      position: relative;
+      width: 300px;
+      padding: 15px 25px 20px;
+      margin: 20px auto;
+      font-size: 26px;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.4em;
+      color: #fff;
+      background: #245991;
+    }
+
+    /*
+      Place the speech bubble shape at the bottom
+    */
+    .quote-container:after {
+      content: "";
+      
+      color: #245991;
+
+      /* apply a triangle shape */
+      border-top: 15px solid;
+      border-left: 15px solid;
+      border-right: 15px solid transparent;
+      border-left: 15px solid;
+
+      /* skew this thing a bit / change the angle on the x axis */
+      transform: skewX(-15deg);
+
+      position: absolute;
+      top: 100%;
+      right: 25px;
+    }
+
+    .credit-to {
+      margin: 1em 0 0;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      font-style: normal;
+      line-height: 1.2em;
+    }
+
+
+    /* place some hyphen before the creidt source */
+    .credit-to:before {
+      content: "— ";
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="quote-container">
+    <div id="quote">
+      <p>If you spend too much time thinking about a thing, you will never get it done.</p>
+    </div>
+    <p class="credit-to">Bruce Lee</p>
+  </div>
+
+</body>
+
+</html>

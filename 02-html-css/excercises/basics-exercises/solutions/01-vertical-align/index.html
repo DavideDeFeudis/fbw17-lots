@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Font awesome icons & text</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style>
+
+    ul {
+      list-style-type: none; /* remove the bullet points */
+      padding: 0; /* remove the default list padding on the left */
+    }
+
+    ul > li {
+      border: 1px solid;
+      margin-bottom: 20px; /* create some space between lis*/
+      padding: 20px;
+    }
+
+    ul > li > span {
+      text-decoration: line-through; /* cross out the texts 
+        in the spans */
+    }
+
+    /* align icons vertically - relative to the text */
+    ul > :nth-child(1) > i {
+      vertical-align: bottom;
+    }
+    ul > :nth-child(2) > i {
+      vertical-align: middle;
+    }
+    ul > :nth-child(3) > i {
+      vertical-align: top;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h4>Vertical align text and icons</h4>
+
+  <ul>
+    <li>
+      <i class="fab fa-xing fa-2x"></i>
+      <span>Some Text in between</span>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </li>
+    
+    <li>
+      <i class="fab fa-xing fa-2x"></i>
+      <span>Some Text in between</span>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </li>
+    
+    <li>
+      <i class="fab fa-xing fa-2x"></i>
+      <span>Some Text in between</span>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </li>
+  </ul>
+
+</body>
+
+</html>

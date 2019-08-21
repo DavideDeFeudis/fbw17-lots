@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox Exercise #10</title>
+  <style>
+    div {
+      padding: 10px;
+      border: 1px solid;
+    }
+
+    body > div {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      height: 60px;
+    }
+
+    #flex4 {
+      align-items: center;
+    }
+
+    #flex1:hover {
+      justify-content: center;
+    }
+
+    #flex2:hover {
+      justify-content: space-between;
+    }
+
+    #flex3:hover {
+      justify-content: space-evenly;
+    }
+
+    #flex4:hover {
+      justify-content: space-around;
+    }
+
+
+    #flex1:active {
+      align-items: center;
+    }
+
+    #flex2:active {
+      align-items: flex-start;
+    }
+
+    #flex3:active {
+      align-items: flex-end;
+    }
+
+    #flex4:active {
+      align-items: stretch;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="flex1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div id="flex2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div id="flex3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div id="flex4">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  
+</body>
+
+</html>

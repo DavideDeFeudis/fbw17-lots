@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #6 - Positioning</title>
+  <style>
+
+    body { 
+      text-align: center;
+    }
+
+    .gradient-underline {
+      position: relative;
+      border: 1px dashed;
+      margin-bottom: 50px;
+    }
+
+    .gradient-underline::after {
+      content: '';
+      background: linear-gradient(to left, lightgreen, lightblue);
+      height: 10px;
+      position: absolute;
+      top: 100%;
+      left: 25%;
+      right: 25%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudo elements + position absolute #1</h1>
+
+  <p>Realize a gradient underline, centered below the text, taking 50% width of its parent container. Good luck!</p>
+
+  <h3 class="gradient-underline">This is some headline</h3>
+  <div class="gradient-underline">Some div</div>
+
+</body>
+
+</html>

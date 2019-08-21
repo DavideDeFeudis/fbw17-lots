@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pseudo elements - exercise 1</title>
+  <style>
+    
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    li::before, li::after {
+      content: '';
+      display: inline-block;
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/161359/quotes.png);
+      width: 1em;
+      height: 1em;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 3px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <h1>The unlucky, naked quotes - give them back their clothes!</h1>
+
+  <p>First: Generate a UL list with 10 list items below these paragraphs. Each item should have lorem text. The ul should have the id "quotes". Use one line of emmet only to create the complete list</p>
+  <p>Then: Please insert this given quote icon <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/161359/quotes.png" /> BEFORE and AFTER each quote! Apply background-size contain to fit it into the given height / width that you give it</p>
+
+  <ul id="quotes">
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero amet nobis autem, quaerat, dolor nostrum, vero unde consequatur quidem incidunt magni sapiente. Blanditiis impedit iusto est. Quis, fuga exercitationem.</li>
+    <li>Officiis dolorem obcaecati corporis nostrum dignissimos cumque autem quibusdam totam perspiciatis. Velit suscipit, doloremque non nemo at neque cumque obcaecati incidunt accusamus tempora quam est quisquam earum reiciendis? Eos, eius?</li>
+    <li>Necessitatibus expedita blanditiis itaque dolores est laboriosam, deleniti autem tenetur nam repellendus cum rem error natus aspernatur voluptatum! Asperiores maxime commodi similique accusantium expedita at deserunt iusto nam dolorum in.</li>
+    <li>Illo at magni similique dolores, eum reprehenderit laborum. Consequuntur quaerat eveniet accusantium, explicabo alias quas fugit reprehenderit beatae mollitia accusamus repellendus possimus consectetur, incidunt, harum nostrum! Inventore culpa obcaecati nihil.</li>
+    <li>Optio quisquam architecto deserunt nemo itaque quas laborum sint omnis tempora, distinctio, voluptatem soluta aliquid consequatur officiis iure labore. Itaque libero nisi excepturi pariatur obcaecati unde harum suscipit quaerat architecto.</li>
+    <li>Architecto possimus non aperiam magnam sint distinctio placeat saepe excepturi temporibus a ipsa numquam explicabo pariatur neque quisquam, cupiditate sed veniam, eius rerum quod? Voluptatum aut repellendus iure delectus blanditiis?</li>
+    <li>Harum explicabo consequatur ea aut doloremque quaerat voluptates iste quisquam libero quos at, adipisci velit quia fuga pariatur ad maiores natus asperiores repudiandae laudantium excepturi temporibus. Doloremque ullam animi nisi?</li>
+    <li>Itaque odio hic omnis possimus! Aspernatur ullam doloremque consequatur quos numquam expedita mollitia. Ea delectus molestiae consequatur dolorum est, sapiente doloremque ratione reprehenderit veritatis minima nemo labore id, iusto sint.</li>
+    <li>Aut excepturi enim cupiditate voluptate repellat sequi quia ex at aliquid officiis quos asperiores, temporibus est quas reiciendis facere. Iusto fugiat molestiae distinctio laboriosam? Mollitia autem earum neque ad. Perferendis.</li>
+    <li>Repellat tempore iure unde debitis dolor eaque, ad saepe iusto cum optio, vel repellendus deleniti quis, vitae amet? In nemo numquam, error odio porro ducimus praesentium tempora impedit maiores sint!</li>
+  </ul>
+
+</body>
+</html>

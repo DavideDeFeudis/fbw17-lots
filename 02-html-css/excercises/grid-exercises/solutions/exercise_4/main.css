@@ -25,7 +25,8 @@ header, nav, .aside1, .aside2, main, section, footer {
 } /*you could also use instead: "body > *, nav {...}" as selector */
 
 header {
-  background: rgb(248, 249, 156);
+  background: yellow; 
+    /* rgb(248, 249, 156); */
   grid-area: header;
   padding: 0 0 0 10px; /*this will keep the left padding, 
     but removes all other padding so the navbar can take up the full height
@@ -38,7 +39,8 @@ header > * {
     the exact same space  */
 }
 nav {
-  background: rgb(201, 169, 190);
+  background: purple;
+   /* rgb(201, 169, 190); */
 }
 nav > ul {
   display: flex;
@@ -54,22 +56,27 @@ nav > ul > li > a {
   text-decoration: none; /* remove the underline from the links */
 } 
 .aside1 {
-  background: rgb(175, 221, 175);
+  background: lightgreen;
+   /* rgb(175, 221, 175); */
   grid-area: aside1;
 }
 .aside2 {
-  background: rgb(175, 221, 175);
+  background: lightgreen; 
+    /* rgb(175, 221, 175); */
   grid-area: aside2;
 }
 main {
-  background:rgb(254, 226, 159);
+  background: rgb(254, 226, 159); /*orange;*/
+    /* rgb(254, 226, 159); */
   grid-area: main;
 }
 section {
-  background: rgb(254, 143, 221);
+  background: magenta; 
+  /* rgb(254, 143, 221); */
   grid-area: section;
 }
 footer {
-  background: rgb(201, 169, 190);
+  background: purple; 
+  /* rgb(201, 169, 190); */
   grid-area: footer;
 }

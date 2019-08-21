@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise 1 - Background images</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0 15%;
+    }
+
+    body > div {
+      margin-bottom: 30px;
+    }
+
+    /* use a flexbox for grouping some images */
+    #images-flex {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid;
+    }
+    #images-flex > * {
+      flex-basis: 30%;
+    }
+
+    /* here we set some base styles for all image DIVs */
+    .img-dog {
+      height: 30vh;
+      border: 1px solid;
+      text-align: right;
+      /* background-image: ... */
+      /* => please set the background image url here  */
+    }
+
+    /* use the following classes to dimension the 
+      individual background images */
+
+    .img-dog-1 {
+
+    }
+    .img-dog-2 {
+
+    }
+    .img-dog-3 {
+
+    }
+    .img-dog-4 {
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Exercise 1 - Background images 
+    (<a target="_blank" href="https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/09/dog-landing-hero-lg.jpg?bust=1536935129&width=1080">link to original</a>)
+  </h1>
+
+  <div class="img-dog">Original - repeated</div>
+  <div class="img-dog img-dog-1">Image scaled down to fit completely into container</div>
+
+  <div id="images-flex">
+    <div class="img-dog img-dog-2">Part of image fills container</div>
+    <div class="img-dog img-dog-3">Left-bottom part of image fills container</div>
+    <div class="img-dog img-dog-4">Center-top part of image fills container</div>
+  </div>
+
+</body>
+
+</html>

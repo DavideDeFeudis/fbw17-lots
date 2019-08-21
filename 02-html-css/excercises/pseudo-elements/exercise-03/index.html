@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pseudo elements - exercise 3</title>
+  <style>
+
+    .sandwich {
+      border: 1px solid;
+      margin-bottom: 3vh;
+    }
+
+/* set common styles for our pseudos here (e.g. content) */
+    .sandwich::before,
+    .sandwich::after {
+
+    }
+
+/* specific styles for our pseudos */
+
+    /* gradient flow from right to left */
+    .sandwich::before {
+
+    }
+
+    /* gradient flow opposite (from left to right) */
+    .sandwich::after {
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudo elements #3</h1>
+
+  <p>
+    Create a top and bottom gradient border. Choose two colors for the gradient to your liking.
+    The first gradient border should flow from right to left, the second one left to right.
+    Additionally: Selected text in the sandwich item should get a lightblue background. 
+    Good luck!
+  </p>
+
+  <div class="sandwich">
+    <div>Bread</div>
+    <div>Cheese</div>
+    <div>Bread</div>
+  </div>
+
+  <div class="sandwich">
+    Some other stuff
+  </div>
+
+</body>
+
+</html>

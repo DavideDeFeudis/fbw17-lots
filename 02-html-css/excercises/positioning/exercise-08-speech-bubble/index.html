@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning #8 - The Speech Bubble</title>
+  <style>
+
+    body {
+      background: #e5e5e5;
+    }
+    
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    .quote-container {
+      position: relative;
+      width: 300px;
+      padding: 15px 25px 20px;
+      margin: 20px auto; /* center the container in the viewport. 
+        Give it some 20 px top margin*/
+      font-size: 26px;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.4em;
+      color: #fff;
+      background: #245991;
+    }
+
+    /*
+      Place the speech bubble shape at the bottom
+      Skew it by 15 degree in left direction
+    */
+    .quote-container:after {
+      content: "";
+      position: absolute;
+
+      color: #245991; /* this will be used as the border color */
+
+      /* apply a triangle shape here 
+      
+        Suggestion: 
+        Use the properties border-top, border-left, border-bottom, border-right.
+        Set the not used borders transparent
+      */
+
+      /* shift / skew this triangle by 15 deg to the left. So we get the nice 
+        speech bubble effect */
+
+      /* use positioning properties to align the triangle shape outside of the container */
+    }
+
+    .credit-to {
+      margin: 1em 0 0;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      font-style: normal;
+      line-height: 1.2em;
+    }
+
+
+    /* place some hyphen with a space in front of our nice credit source, Mr. Lee */
+    .credit-to:before {
+      
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="quote-container">
+    <div id="quote">
+      <p>If you spend too much time thinking about a thing, you will never get it done.</p>
+    </div>
+    <p class="credit-to">Bruce Lee</p>
+  </div>
+
+</body>
+
+</html>
