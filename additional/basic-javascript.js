@@ -408,10 +408,10 @@
 
 
 
-//Create your function below this line.
-/* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
-bmi should equal around 20 in this case.
-*/
+// Create your function below this line.
+// If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+// bmi should equal around 20 in this case.
+
 
 // function bmiCalculator(weight, height) {
 //     let bmi = Math.floor(weight / Math.pow(height, 2));
@@ -441,14 +441,14 @@ bmi should equal around 20 in this case.
 //     else return number;
 // }
 
-// for (let i = 1; i <= 100; i++) {
+// for (let i = 1; i <= 15; i++) {
 //     console.log(fizzBuzz(i));
 // }
 
 
 
 // SHORTCUTS
-// 
+
 // console.log: log tab
 // ctrl shift P: open shortcuts menu
 
@@ -491,34 +491,59 @@ bmi should equal around 20 in this case.
 
 
 
-let accounts = {
-    john: {
-        balance: 1000,
-        pin: 1234
-    },
-    anna: {
-        balance: 2000,
-        pin: 5678
-    }
-};
 
 
-let accountName = "john";
-console.log(accounts.accountName.pin);
 
-function withdraw(amount, pinProvided, accountName) {
 
-    if (pinProvided !== accounts.accountName.pin) {
-        console.log("wrong pin");
-    } else if (amount > accounts.accountName.balance) {
-        console.log("error: residual credit is " + accounts.accountName.balance);
-    } else {
-        console.log("success");
-        accounts.accountName.balance -= amount;
-    }
+// let accounts = {
+//     john: {
+//         balance: 1000,
+//         pin: 1234
+//     },
+//     anna: {
+//         balance: 2000,
+//         pin: 5678
+//     }
+// };
 
-}
+// function withdraw(amount, pinProvided, accountName) {
+
+//     if (pinProvided !== accounts[accountName].pin) {
+//         console.log("wrong pin");
+//     } else if (amount > accounts[accountName].balance) {
+//         console.log("error: residual credit is " + accounts[accountName].balance);
+//     } else {
+//         console.log("success");
+//         accounts[accountName].balance -= amount;
+//     }
+
+// }
 
 // withdraw(100, 15234, "john");
 // withdraw(1200, 1234, "john");
 // withdraw(100, 1234, "john");
+
+
+
+
+
+
+
+
+//  Find the biggest Number in an Array of Strings
+//  https://www.goconqr.com/c/62053/course_modules/92732-find-biggest-and-smallest-number-in-an-array-of-strings?=
+
+
+// let array = ['63', '55', '72', '77', '35', '81', '95', '29', '44', '80'];
+
+// let numberArray = [];
+
+// for (i = 0; i < array.length; i++) {
+//     let num = Number(array[i]);
+//     numberArray.push(num);
+// }
+
+// let maxValue = Math.max(...numberArray);
+// let minValue = Math.min(...numberArray);
+
+// console.log(minValue, maxValue);

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images Exercise #4 - The big clash - bg-img vs bg-color</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #bg-collection {
+            width: 80vw;
+            /* border: solid; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #bg-collection>div {
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            border: 20px dashed black;
+            background-color: yellow;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        #bg-2 {
+            /* show the background color just in the content area */
+            background-clip: content-box;
+        }
+
+        #bg-3 {
+            /* show the background color everywhere except behind the border */
+            background-clip: padding-box;
+        }
+
+        /* set background images to containers 4-7 */
+        #bg-4,
+        #bg-5,
+        #bg-6,
+        #bg-7 {
+            /* load an bg-image from unsplash.it here with size 150x150 pixels 
+      Do not apply any other background-properties here 
+      (we set them individually per container)
+      */
+            background-image: url(//unsplash.it/150/150);
+            color: black;
+            font-weight: 900;
+            background-size: cover;
+        }
+
+        #bg-4 {
+            /* this should fill the image in the whole container. 
+      The image should start repeating behind the border. 
+      (we do not want to see the background-color shine through).
+      */
+        }
+
+        #bg-5 {
+            /* again: fill the whole container with the image.
+      This time switch background-repeat off */
+            background-repeat: no-repeat;
+        }
+
+        #bg-6 {
+            /* the image should not fill the content area of the container. 
+      On the padding area we should see the background-color shining through... 
+      */
+            background-origin: content-box;
+            background-repeat: no-repeat;
+        }
+
+        #bg-7 {
+            /* the image should fill the whole container,
+      including the area behind the border. But this time without repeat.
+      */
+            background-origin: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bg-collection">
+
+        <div id="bg-1">
+            Just bg-color
+        </div>
+        <div id="bg-2">
+            Color just on content
+        </div>
+        <div id="bg-3">
+            Color on padding and content
+        </div>
+        <div id="bg-4">
+            bg-image with repeat
+        </div>
+        <div id="bg-5">
+            bg-imgage without repeat
+        </div>
+        <div id="bg-6">
+            bg-image just on content
+        </div>
+        <div id="bg-7">
+            bg-img everywhere (incl. border)
+        </div>
+
+    </div>
+
+</body>
+
+</html>
