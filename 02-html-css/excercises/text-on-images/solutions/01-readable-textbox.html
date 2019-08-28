@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #1 - Image filters - Textbox</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .img-container {
+      border: 1px solid;
+      width: 200px;
+      height: 200px;
+
+      /* load a random background covering the whole box */
+      background-image: url(//unsplash.it/200/200);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* please make the text readible on its background by appling 
+       a transparent background + the matching foreground color */
+    h2 {
+      margin: 0;
+      padding: 10px;
+
+      background: rgba(255, 255, 255, 0.5);
+      color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="img-container centered">
+    <h2>This is my text</h2>
+  </div>
+
+</body>
+
+</html>

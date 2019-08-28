@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #2 - Image Filters - Multiple Background layers</title>
+  <style>
+    
+    .img-container {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      
+      /* this is for centering the H2 inside the container */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+
+      /* setup of the background layers
+        The background layer is the image
+        The top layer is the linear-gradient (our color filter)
+      */
+      background-image: url(//unsplash.it/200/200);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #img-2 {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(//unsplash.it/200/200);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="img-container">
+    <h2>Just the two of us</h2>
+  </div>
+
+  <div class="img-container" id="img-2">
+    <h2>Just the two of us</h2>
+  </div>  
+
+</body>
+
+</html>

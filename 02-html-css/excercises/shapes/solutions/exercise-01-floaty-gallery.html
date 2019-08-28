@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shapes - Exercise #1 - Floaty circle gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    article {
+      margin: 20px 0;
+    }
+
+    article img {
+      border: 1px solid;
+      border-radius: 50%;
+      margin-right: 10px;
+      float: left;
+    }
+
+    article::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Create everything with emmet
+   main>article*5>img[src="//unsplash.it/100/100"]+span>lorem
+   -->
+
+  <main>
+    <article>
+      <img src="//unsplash.it/100/100" alt="">
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus facere rerum ex rem fugiat obcaecati iure
+        vero eaque eveniet cumque, nobis, veniam, magni dicta eum placeat. Dolore accusamus perferendis iste.
+      </span>
+    </article>
+    <article>
+      <img src="//unsplash.it/100/100?" alt="">
+      <span>Culpa consectetur praesentium beatae eos laudantium amet sit reiciendis, mollitia nemo alias voluptatum
+        fugiat impedit pariatur architecto officia? Cumque ipsam eligendi cupiditate distinctio quasi exercitationem
+        necessitatibus culpa ut animi aut.</span>
+    </article>
+    <article>
+      <img src="//unsplash.it/100/100??" alt=""><span>Reprehenderit, debitis maiores sed nesciunt repellat inventore quam
+        provident deleniti voluptate suscipit libero doloribus ipsum officiis, quos dolores, quisquam facere doloremque
+        commodi amet autem. Aspernatur natus dicta iste magni ad.</span>
+    </article>
+    <article>
+      <img src="//unsplash.it/100/100???" alt=""><span>Temporibus illo autem animi sunt sapiente. Exercitationem voluptas
+        reiciendis iure excepturi? Quos deserunt assumenda neque dicta fugit est porro, optio impedit expedita, minus
+        labore sit, et beatae accusantium corporis dolorem.</span>
+    </article>
+    <article>
+      <img src="//unsplash.it/100/100????" alt=""><span>Eaque perferendis quas expedita deserunt corrupti quos fugiat
+        voluptas mollitia unde assumenda facere ipsa aut, perspiciatis iusto necessitatibus, vel hic suscipit facilis
+        provident odit porro explicabo esse. Excepturi, consectetur ut?</span>
+    </article>
+  </main>
+
+
+</body>
+
+</html>

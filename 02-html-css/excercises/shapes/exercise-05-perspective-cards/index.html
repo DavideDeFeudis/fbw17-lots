@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shapes - Exercise #5 - 3D cards</title>
+  <style>
+
+    /* give our cards some "depth" by setting a perspective */
+
+    body {
+      height: 100vh;
+      margin: 0;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .cards {
+      display: flex;
+      width: 80%;
+    }
+
+    .card {
+      flex-basis: 33%;
+      height: 100px;
+      border: 1px solid black;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      font-weight: bolder;
+
+      background: yellow;
+    }
+
+    /* give all spans a background and attach the background 
+      to the text using background-clip. Make sure the text is set 
+      transparent, otherwise the background below could not be seen...
+       */
+    .card > span {
+
+    }
+
+    /* rotate each card individually and apply some box shadow */
+    .card:nth-child(1) {
+      
+    }
+
+    .card:nth-child(2) {
+
+    }
+
+    .card:nth-child(3) {
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cards">
+    <div class="card">
+      <span>Everything</span>
+    </div>
+    <div class="card">
+      <span>is</span>
+    </div>
+    <div class="card">
+      <span>perspective</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Positioning Exercise #14 - The fixed vanishing header</title>
+  <style>
+    
+    body {
+      margin: 0;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+    }
+
+    nav > ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav > ul > li {
+      list-style-type: none;
+
+      flex-basis: 25%;
+      padding: 10px;
+
+      font-size: 1.5rem;
+      font-style: italic;
+      text-align: center;
+
+      border-radius: 10px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* fix the background image of the header so it does not move at all
+      when scrolling the page */ 
+    header {
+      height: 70vh;
+      color: white;
+      font-size: 2rem;
+      font-style: italic;
+
+      /* centering the headline withing the header
+        with the grid technique 
+        => same effect as with flexbox + justify + align
+      */
+      display: grid;
+      place-items: center;
+
+      background-image: url(//unsplash.it/500/500);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* fix the headline h1 so it sticks together with 
+        the header background. Even when scrolling the page*/
+    header > h1 {
+      margin: 0;
+      padding: 20px;
+      left: 15%;
+      right: 15%;
+      text-align: center;
+    }
+
+    main {
+      position: relative; /*
+        this is necessary, otherwise the positioned element above 
+        (the header) would go on top. Why?
+        In the stacking order positioned elements always win over 
+        non-positioned elements. 
+        But if two positioned elements "meet" the last one will win.
+        That's why we give the main a position too to keep the main
+        on top of the header always.
+      */
+      background: white;
+      font-family: sans-serif;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Products</li>
+      <li>Contact me</li>
+      <li>Donate</li>
+      <li>Imprint</li>
+    </ul>
+  </nav>
+  <header>
+    <h1>My awesome website</h1>
+  </header>
+  <main>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam quia dignissimos fuga dolore, laboriosam rem tenetur
+    necessitatibus corrupti, numquam, iste labore. Ipsa repellat, voluptatibus vero voluptate itaque quod modi nostrum!
+    Consequuntur, quae quisquam. Accusamus suscipit quod ullam eos. Illo modi ullam sunt, magni fugiat quidem commodi
+    facere expedita perspiciatis mollitia quas aliquid nihil velit nostrum quis eaque voluptates reprehenderit
+    reiciendis.
+    Dolorem qui culpa temporibus ullam voluptate magni, cum quisquam rem eum expedita minima blanditiis dignissimos,
+    voluptatem saepe quia neque quae, adipisci molestiae illo delectus totam itaque ratione sapiente? Saepe, nobis.
+    Esse mollitia dicta sed libero impedit voluptates, voluptatem, soluta nemo ipsam ipsa quae quidem excepturi quis
+    quos? Ex quae a asperiores veniam facere excepturi obcaecati sit eveniet dolores! Ipsa, blanditiis?
+    Ad, sunt, quia hic debitis ipsam nesciunt placeat sequi accusamus quas error laudantium maxime minus a perspiciatis
+    vero. Sunt sit cum doloremque soluta est magnam cumque eum assumenda laboriosam labore.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum repudiandae fuga optio obcaecati illum illo explicabo
+    exercitationem, assumenda perferendis delectus architecto ipsam mollitia! Aperiam consequuntur ipsam optio, eos
+    voluptatum sint.
+    Asperiores necessitatibus odit sapiente atque, ut veritatis sint aperiam et suscipit facilis ipsam, aliquid sequi.
+    Molestias, rem voluptates odit eveniet reiciendis, aliquid ratione magni, est voluptatem eos odio! Repellat, nihil.
+    Maxime doloribus quam consequatur sed atque non in nam ad quis facere optio accusantium illo necessitatibus,
+    possimus aspernatur sit ipsa assumenda reprehenderit, praesentium sunt libero id dolore. Minus, amet iusto!
+    Atque iste delectus eveniet officiis repellendus, quis veritatis sint impedit consequuntur hic maiores dicta dolores
+    quas molestias deleniti non aliquid, necessitatibus neque? Quae vero, sit repellat voluptatem architecto deleniti
+    sapiente.
+    Qui, alias eveniet fugit delectus tempore odio veritatis obcaecati sed, pariatur reprehenderit excepturi ipsa
+    cupiditate a vero similique inventore dolor necessitatibus doloribus ea! Necessitatibus corrupti deleniti modi
+    doloribus, at aliquid.
+
+  </main>
+
+</body>
+
+</html>

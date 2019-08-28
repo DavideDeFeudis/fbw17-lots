@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shapes - Exercise #4 - CSS Grid gallery with shape-shadow</title>
+  <style>
+
+    #grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      width: 300px;
+      height: 300px;
+      border: 1px solid;
+      
+      filter: drop-shadow(5px 5px 5px black);
+    }
+
+    #grid-gallery > div {
+      background-image: url(//unsplash.it/300/300);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #grid-gallery > :nth-child(1) {
+      grid-row: 1;
+      grid-column: 1;
+
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    }
+
+    #grid-gallery > :nth-child(2) {
+      grid-row: 1;
+      grid-column: 3;
+
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    #grid-gallery > :nth-child(4) {
+      grid-row: 3;
+      grid-column: 1;
+
+      clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    }
+
+    #grid-gallery > :nth-child(5) {
+      grid-row: 3;
+      grid-column: 3;
+
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      transform: scalex(-1);
+    }
+
+    /* a bit special handling for the text...
+      lets clip the background to match the text shape by 
+      using background-clip
+     */
+    #grid-gallery > :nth-child(3) {
+      grid-row: 2;
+      grid-column: 1 / span 3; /* span the text across 
+        whole row number 2  */
+
+      display: grid;
+      place-items: center;
+
+      /* text setup */ 
+      font-size: 4rem;
+      font-weight: 900;
+      text-align: center;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="grid-gallery">
+    <div></div>
+    <div></div>
+    <div>CSS Grid</div>
+    <div></div>
+    <div></div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #3 - Blur filter on hovering</title>
+  <style>
+
+    *
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .cards-container {
+      display: flex; /* align all cards in the container next to each other
+       => flex makes this easy */
+    }
+
+    /* this card is just a container for the image + card totle */
+    .card {
+
+      background-color: black;
+      width: 150px;
+      height: 150px;
+      margin: 20px;
+      border: 1px solid;
+
+      /* we use flex to center the H2 headline within the card */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* make the container an anchor point for our pseudo elements here... 
+      */
+    }
+
+    /* 
+      We use the pseudo ::before to hold our background image. 
+        Please load an image from unsplash.it as background.
+        Make the image cover the entire card container
+    */
+    .card::before {
+      position: absolute;
+      background-image: '';
+    }
+
+    .card-title {
+      position: relative;
+      padding: 10%; /* we indent the title a bit, so the overlay goes nicely around it */
+
+      /* by default the card-title should be hidden and only get visible 
+        on hovering over the card. Please make it invisible here... */
+
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      text-align: center; /* this is needed for centerin the text itself. 
+        display:flex only centers the text box within the card, not the text
+        itself */
+    }
+
+    /* make the card title visible on hover*/
+    .card:hover .card-title {
+
+    }
+
+    /* show the white box overlay on hover (we use the pseudo ::after for that) */
+    .card:hover::after {
+
+      /* positioning goes here */ 
+    }
+
+    /* make the second image a bit blurry on hover. 
+
+      write below the selector for grabbing the ::before element when hovering 
+      over the card (::before holds the image!).
+      
+      within the selector: apply the blur filter to the image
+    */
+
+  </style>
+</head>
+
+<body>
+
+  <h2>The nested backgrounds with color-filter on hover</h2>
+  <p>When hovering over an image: Show the card title + a pseudo box around</p>
+  <p>When hovering over image 2: Please make the image transparent a bit against it's background container. So the text becomes much more readable</p>
+
+  <div class="cards-container">
+
+    <div class="card" id="card-1">
+      <div class="card-img"></div>
+      <div class="card-title">Well done CSS master!</div>
+    </div>
+
+    <div class="card" id="card-2">
+      <div class="card-img"></div>
+      <div class="card-title">Well done CSS master!</div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
