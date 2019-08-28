@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10vh;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            clip-path: ellipse(25% 50%);
+            shape-outside: ellipse(25% 50%);
+            margin-right: 15px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Clip-Path draws the shape. And shape-outside defines the boundary to other elements. Text flowing around it will
+        respect the boundary</h4>
+    <div></div>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iure laborum esse minus repellendus eos nisi
+        aliquid libero. Enim quas in incidunt ad cumque pariatur minima nisi. Tempore, quas accusamus!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit enim, modi expedita consequatur quod, repellat
+        corporis accusamus ab id necessitatibus est ea provident tempora quas. Modi omnis nobis accusantium magni.
+    </span>
+</body>
+
+</html>

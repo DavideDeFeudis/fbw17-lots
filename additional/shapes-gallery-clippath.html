@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shapes - Exercise #2 - Shape outside</title>
+    <title>Shapes - Exercise #3 - Clip-path shape gallery</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,31 +13,41 @@
 
         article {
             margin: 20px 0;
-            text-align: justify;
         }
 
-        /* give the image a shape outside which matches his own shape */
-        article img {
-            border: 1px solid;
-            border-radius: 50%;
-            margin-right: 10px;
-            float: left;
-            shape-outside: circle();    
-        }
-
-        article:nth-child(odd) > img {
+        article:nth-child(odd) img {
             float: right;
-            /* visibility: hidden; */
+            margin-left: 15px;
         }
 
-        /* write the selector here to grab the image of every odd / uneven article
-      Let the image float in opposite direction
-      ....
-     */
-        /* ... selector goes here... */
+        article:nth-child(even) img {
+            float: left;
+            margin-right: 15px;
+        }
+
+        article:nth-child(2) img {
+            clip-path: circle();
+            shape-outside: circle();
+        }
+
+        article:nth-child(3) img {
+            clip-path: circle(50% at 50% 0%);
+            shape-outside: circle(50% at 50% 0%);
+        }
+
+        article:nth-child(4) img {
+            clip-path: ellipse(25% 50%);
+            shape-outside: ellipse(25% 50%);
+        }
+
+        article:nth-child(5) img {
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
         article::after {
             content: '';
-            display: block;
+            display: table;
             clear: both;
         }
     </style>
@@ -58,6 +68,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloremque veniam officiis incidunt
                 alias ullam possimus, deserunt iure provident, cumque corporis unde at consequatur culpa sequi non quas
                 praesentium eum.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde harum debitis, et nisi doloribus numquam
+                eveniet perspiciatis repudiandae libero, vitae, consequuntur vel? Amet ad esse consectetur iste illum,
+                ullam harum!
             </span>
         </article>
         <article>
@@ -69,6 +82,9 @@
                 necessitatibus culpa ut animi aut.
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod hic quo cum natus eaque laboriosam iusto
                 soluta magni optio tempore nihil a, in aliquid ullam fuga iste reprehenderit ipsam veniam.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde harum debitis, et nisi doloribus numquam
+                eveniet perspiciatis repudiandae libero, vitae, consequuntur vel? Amet ad esse consectetur iste illum,
+                ullam harum!
             </span>
         </article>
         <article>
@@ -80,6 +96,9 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eaque commodi magni aut ipsa quod,
                 architecto quaerat neque unde repellat consequuntur veritatis recusandae rerum sapiente amet tenetur
                 possimus est ea.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde harum debitis, et nisi doloribus numquam
+                eveniet perspiciatis repudiandae libero, vitae, consequuntur vel? Amet ad esse consectetur iste illum,
+                ullam harum!
             </span>
         </article>
         <article>
@@ -88,6 +107,9 @@
                 reiciendis iure excepturi? Quos deserunt assumenda neque dicta fugit est porro, optio impedit expedita,
                 minus
                 labore sit, et beatae accusantium corporis dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde harum debitis, et nisi doloribus numquam
+                eveniet perspiciatis repudiandae libero, vitae, consequuntur vel? Amet ad esse consectetur iste illum,
+                ullam harum!
             </span>
         </article>
         <article>
@@ -96,6 +118,9 @@
                 voluptas mollitia unde assumenda facere ipsa aut, perspiciatis iusto necessitatibus, vel hic suscipit
                 facilis
                 provident odit porro explicabo esse. Excepturi, consectetur ut?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde harum debitis, et nisi doloribus numquam
+                eveniet perspiciatis repudiandae libero, vitae, consequuntur vel? Amet ad esse consectetur iste illum,
+                ullam harum!
             </span>
         </article>
     </main>

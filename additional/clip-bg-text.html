@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: grid;
+            place-items: center;
+            background: black;
+        }
+
+        #child {
+            font-size: 2.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, orange, red, yellow);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child">Image text</div>
+    </div>
+</body>
+
+</html>

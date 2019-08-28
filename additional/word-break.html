@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+/* see &shy; in html span */
+
+        body {
+            margin: 10vh;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            clip-path: ellipse(25% 50%);
+            shape-outside: ellipse(25% 50%);
+            margin-left: 5px;
+            float: right;
+        }
+
+        span {
+            word-wrap: break-word;
+            word-wrap: break-all;
+            word-break: break-word;
+            /* word-break: break-all; */
+            /* hyphens: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Break text where we want it to break...</h4>
+    <div></div>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iure laborum esse minus repellendus eos nisi
+        ali&shy;quid libero. Enim quas in incidunt ad cumque pariatur minima nisi. Tempore, quas accusamus!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit enim, modi expedita consequatur quod, repellat
+        corporis accusamus ab id necessitatibus est ea provident tempora quas. Modi omnis nobis accusantium magni.
+    </span>
+</body>
+
+</html>
