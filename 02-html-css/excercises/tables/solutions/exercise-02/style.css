@@ -1,0 +1,20 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse; /* collapse all adjacent cell borders into one */
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+/* every second row should have a lightgrey background */
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* the contents of cells with numbers should be aligned right */
+td:last-child {
+  text-align: right;
+}

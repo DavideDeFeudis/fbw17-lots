@@ -12,5 +12,8 @@ Apply a z-index when necessary :)
 
 Result on hovering over an icon:
 
-![Preview](result.png)
+![Preview](result.gif)
 
+Pro task:
+
+Instead of using the predefined index.html you can use the index-no-css.html file as boilerplate. This contains just the HTML with icons, no styling. Style the complete menu on your own / from scratch.

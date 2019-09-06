@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #5 - YouTube Video 3D</title>
+  <style>
+
+    body {
+      margin: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      background: #ff63a1;
+
+      perspective: 100vw; /* apply a perspective on the body
+        So all rotated elements within the body will 
+        get a 3D depth effect 
+       */
+    }
+
+    main {
+      border: 5px solid #fdffca;
+      height: 70vh;
+      width: 50vw;
+
+      border-radius: 5px; /* slightly rounded corners */
+
+      transform: rotateY(-35deg); /* this creates the skewed youtube frame */
+      transition: 1s; /* let the rotation move take 1 second */
+
+      /* multiple box shadows -> typical for 3D depth effect */
+      box-shadow: 
+        4px 3px 0 5px #333, 
+        40px 30px 15px rgba(0, 0, 0, .4);
+    }
+
+    main:hover {
+      transform: rotateY(0deg); /* we just rotate our element back
+        to its "flat" position */
+
+      /* reset the shadow to a slighter one */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <iframe src="https://www.youtube.com/embed/32kJ23O9Wbk" 
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </main>
+
+
+</body>
+
+</html>

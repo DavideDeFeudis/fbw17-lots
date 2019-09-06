@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Forms - #2 - Focussing & outline</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+
+      display: grid;
+      place-items: center;
+
+    }
+
+    fieldset {
+      width: 30vw;
+      padding: 2em;
+    }
+
+    legend {
+      text-transform: uppercase;
+    }
+
+    input {
+      display: inline-block;
+      padding: 5px 0px;
+
+      /* YOUR CODE: make all inputs transparent */
+      /* YOUR CODE: hide the red boxes on selection (=outline) */
+    }
+
+    .input-box {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 20px;
+    }
+
+    /* YOUR CODE: give the button full width and 
+      some border styling border color to use: #4caf50
+    */
+    input[type=button] {
+
+    }
+
+    /* YOUR CODE: the inputs should have no border 
+      and full width 
+    */ 
+    input[type=text],
+    input[type=password] {
+
+    }
+
+
+    /* YOUR CODE: increase the border of the input-box div
+      when an input is selected. Use :focus-within pseudo 
+      class to select the div where an input was selected
+
+    */
+
+    /* YOUR CODE: make the placeholder bold when an input 
+      is selected. 
+      Combine the :focus + ::placeholder pseudo element
+    */
+
+  </style>
+</head>
+
+<body>
+
+  <fieldset>
+    <legend>Submit! We want your data</legend>
+
+    <div class="input-box">
+      <input type="text" name="firstname" id="firstname" 
+        placeholder="Your firstname...">
+    </div>
+    <div class="input-box">
+      <input type="text" name="lastname" id="lastname" 
+        placeholder="Your lastname...">
+    </div>
+    <div class="input-box">
+      <input type="password" name="password" id="password" 
+        placeholder="Your password...">
+    </div>
+    <input type="button" value="Contact us">
+
+  </fieldset>
+
+</body>
+
+</html>

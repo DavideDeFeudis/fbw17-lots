@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #3 - Tossing balls</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    main:active .ball-one {
+      transform: translateX(100px);
+      transition: transform 0.5s ease-in;
+    }
+
+    main:active .ball-two {
+
+      /* apply a delayed ease-out move */
+      transform: translateX(100px); 
+      transition: transform 1s 0.5s ease-out;
+    }
+
+
+    /* CSS Setup for the two balls 
+      -> no need here to change anything */
+    .ball-one {
+      background: #ff97C0;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      
+      position: absolute;
+      left: 0px;
+      bottom: 50vh;
+    }
+
+    .ball-two {
+      background: #0097C0;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      
+      position: absolute;
+      left: 300px;
+      bottom: 50vh;
+    }
+
+    .ground {
+      border: 10px solid #333;
+      width: 100%;
+
+      position: absolute;
+      top: 50vh;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="ball-one"></div>
+    <div class="ball-two"></div>
+  <main>
+  <div class="ground"></div>
+
+</body>
+
+</html>

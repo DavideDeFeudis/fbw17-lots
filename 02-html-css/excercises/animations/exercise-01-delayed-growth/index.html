@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #1 - Delayed growth</title>
+  <style>
+    
+    div {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    /* Apply a transition to both div boxes. 
+      Both should have a duration of 1 second.
+      
+      But the second box should start its transition just after the 
+      first one has finished!
+    */
+    
+    div.one {
+      background: red;
+    }
+
+    div.two {
+      background: blue;
+    }
+
+    /* when hovering on the container both divs get a width of 300px.
+      Nothing needs to be changed here...
+     */
+    main:hover > div {
+      width: 300px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  <p>
+    Apply a 1 second transition to the width property of div one.
+  </p>
+  <p>
+    Apply also a 1 second transition to the width property of div two.
+    But make sure the animation starts only after the div one transition has stopped
+    (hint: use delay)
+  </p>
+
+  <main>
+    <div class="one"></div>
+    <div class="two"></div>
+  </main>
+
+</body>
+
+</html>

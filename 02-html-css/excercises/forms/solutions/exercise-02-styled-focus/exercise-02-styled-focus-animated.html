@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Forms - #2 - Focussing & outline (animated)</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+
+      display: grid;
+      place-items: center;
+
+    }
+
+    fieldset {
+      width: 30vw;
+      padding: 2em;
+    }
+
+    legend {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    input {
+      display: inline-block;
+      padding: 5px 0px;
+
+      background: transparent; /* make all inputs transparent */
+      outline: none; /* hide the red boxes */
+
+    }
+
+    .input-box {
+      /* border-bottom: 1px solid #4caf50; */
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 20px;
+
+      transition: 0.4s;
+
+      position: relative; /* needed for our abs positioned underlines */
+    }
+
+    /* give the button full width and some border styling */
+    input[type=button] {
+      width: 100%;
+      border: 2px solid #4caf50;
+      border-radius: 4px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* give the inputs full width */ 
+    input[type=text],
+    input[type=password] {
+      border: 0;
+      width: 100%;
+    }
+
+
+    /* prepare an underline  */
+    .input-box::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      background: #4caf50;
+      left: 0;
+      bottom: 0;
+      width: 0; /* by default this has no width.*/
+      transition: width 0.5s; /* on focussing we change the state 
+        of the width to 100%. We want that this takes 1 second */
+    }
+
+    /* make the placeholder bold */
+    input:focus::placeholder {
+      font-weight: bold;
+    }
+
+    /* expand the underline */
+    .input-box:focus-within::after {
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <fieldset>
+    <legend>Submit! We want your data</legend>
+
+    <div class="input-box">
+      <input type="text" maxlength="5" name="firstname" id="firstname" 
+        required placeholder="Your firstname...">
+    </div>
+    <div class="input-box">
+      <input type="text" minlength="2" name="lastname" id="lastname" 
+        required placeholder="Your lastname...">
+    </div>
+    <div class="input-box">
+      <input type="password" name="password" id="password" 
+        required pattern=".{6,10}" placeholder="Your password...">
+    </div>
+    <input type="button" value="Contact us">
+
+  </fieldset>
+
+</body>
+
+</html>

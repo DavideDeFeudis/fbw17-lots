@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #7 - Dribbling ball (double animation)</title>
+  <style>
+    
+    * {box-sizing: border-box;}
+    
+    body {
+      margin: 0; 
+      overflow: hidden; 
+    }
+
+    .ball {
+      position: absolute;
+      bottom: 30vh;
+      width: 100px;
+      height: 100px;
+      
+      background: red;
+      clip-path: circle();
+
+      /* apply both animations here using the "animation" property
+      (hint: use the keyframe names. Separate the two animation 
+      setups by comma please!)
+      
+      The move forward animation should take 5 seconds 
+      and should be linear.
+      
+      The up-and-down move animation should take much less time.
+      It also needs a different timing-function (do not use linear)
+      (experiment with the values ease, ease-in, ease-out, 
+      ease-in-out to find the best match)
+      
+      Both animations should run for infinity
+      */
+
+    }
+
+    .ground {
+      position: absolute;
+      top: 70vh;
+      left: 0;
+      width: 100%;
+
+      border-top: 20px solid #333;
+    }
+
+    /* write the code for the two "movements" 
+      One for the move forward. 
+      The other one for the move up and down
+     */
+
+    @keyframes forward {
+      0% {
+      }
+
+      100% {
+      }
+    }
+
+    @keyframes dribbling {
+      0% {
+      }
+
+      50% {
+
+      }
+
+      100% {
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  <p>Please animate the ball so it moves forward + up and down.
+    Therefore create TWO animations, one for moving forward, 
+    the other one for moving down.</p>
+  <p>Please beware: Do not use transform in BOTH animations. 
+      This will not work, because they both would overwrite each other.
+      Try to move the ball forward with absolute position (left)
+      and realize the up and down movement with transform (translate on y axis).
+  </p>
+
+  <div class="ball"></div>
+  <div class="ground"></div>
+
+</body>
+
+</html>

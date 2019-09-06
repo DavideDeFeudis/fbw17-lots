@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #2 - Ease in-out</title>
+  <style>
+
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin-bottom: 10px;
+
+      color: white;
+      font-weight: bold;
+
+      /* here we center the text within the divs */
+      display: grid;
+      place-items: center;
+    }
+
+    /* TODO: apply the transitions here 
+      See the instructions in the HTML below
+    */
+    #one {
+    }
+
+    #two {
+    }
+
+    main:hover div {
+      width: 400px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  Apply a 3 second transition to the width property of the div.
+
+  Define an ease-in timing function for the first div transition.
+  Define an ease-out timing function for the second div transition.
+
+  <main>
+    <div id="one">Ease-In</div>
+    <div id="two">Ease-Out</div>
+  </main>
+
+  <p>Hover over the main container to see both applied at the same time. 
+    Compare the difference!</p>
+
+</body>
+
+</html>

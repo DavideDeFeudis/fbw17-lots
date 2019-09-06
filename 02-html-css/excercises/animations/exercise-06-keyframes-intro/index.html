@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #6 - Keyframes Intro</title>
+  <style>
+
+    #container {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      margin: 50px auto;
+    }
+
+    .red {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: red;
+      opacity: 0.75;
+
+      /* your animation code goes here 
+        Apply name, duration, iteration-count + timing function
+      */
+    }
+
+
+    .green {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      top: 12.5px;
+      left: 12.5px;
+      background: green;
+      opacity: 0.75;
+
+      /* your animation code goes here 
+        Apply name, duration, iteration-count + timing function
+      */
+    }
+
+
+    .blue {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 25px;
+      left: 25px;
+      background: blue;
+
+      /* your animation code goes here 
+        Apply name, duration, iteration-count + timing function
+      */
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  <p>Add the "rotate" animation to all boxes. Adapt it 
+    so each of the 3 boxes rotates with a different speed.
+  </p>
+
+  <div id="container">
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+  </div>
+
+</body>
+
+</html>

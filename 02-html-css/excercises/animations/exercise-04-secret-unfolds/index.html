@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #4 - The secret message unfolds</title>
+  <style>
+    
+    /* this one holds all our absolutely positioned boxes 
+      We don't need to change anything here
+    */
+    main {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .message {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      font-size: 2rem;
+
+      /* this nicely centers the message text */
+      display: grid;
+      place-items: center;
+
+    }
+
+    /* all the boxes should get a delayed rotation... 
+      please apply an transition on all of them 
+      (can be the same for every box)
+    */
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+
+      /* YOUR CODE HERE PLEASE :) */
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+      background: red;
+    }
+
+    .top-right {
+      top: 0px;
+      left: 50%;
+      background: yellow;
+    }
+
+    .bottom-left {
+      left: 0px;
+      top: 50%;
+      background: blue;
+    }
+
+    .bottom-right {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+
+    /* please apply the transforms of the boxes here
+      Hint: Use a combination of translatex + rotate
+
+      YOUR CODE BELOW PLEASE :-)
+     */
+
+    main:hover .top-left {
+
+    }
+
+    main:hover .top-right {
+
+    }
+
+    main:hover .bottom-left {
+
+    }
+
+    main:hover .bottom-right {
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  <p>
+    Apply transitions to the CSS so that the coloured squares "open up"
+    when we hover over the div "main".
+  </p>
+  <p>
+    To "open up" each square box should get translated 100% of its width "away"
+    and afterwards rotated by 90deg.
+  </p>
+  <p>
+    Boxes next to each other should rotate in alternate direction.
+  </p>
+
+  <main>
+    <div class="message">Hi!</div>
+    <div class="top-left"></div>
+    <div class="top-right"></div>
+    <div class="bottom-left"></div>
+    <div class="bottom-right"></div>
+  </main>
+
+
+</body>
+
+</html>

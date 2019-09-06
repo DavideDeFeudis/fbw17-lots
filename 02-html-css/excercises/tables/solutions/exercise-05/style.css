@@ -1,0 +1,29 @@
+table {
+  width: 80vh;
+  height: 80vh;
+  font-weight: bold;
+  text-align: center;
+  border-collapse: collapse; /* remove adjacent cell borders*/
+  table-layout: fixed;  /* this assures all columns have the same width 
+    independent from the content size. We need this so our image-cells, 
+    which do not have any content, get the same width as the text cell in
+    the middle
+  */ 
+}
+
+/* apply a background image to ALL cells */
+td {
+  border: 2px solid white;
+
+  background-image: url(https://unsplash.it/100/100);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 
+  within the second row we select the "first" td 
+  and we remove the background image there
+*/
+tr:nth-child(2) td:first-child {
+  background-image: none;
+}

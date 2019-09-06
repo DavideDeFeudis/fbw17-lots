@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #6 - Keyframes Intro</title>
+  <style>
+
+    #container {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      margin: 50px auto;
+    }
+
+    /* all three boxes (=all children of the container) 
+      should get the same animation assigned. 
+      Also all animations have the same timing (linear).
+      
+      But they differ in duration and iteration count
+      => we set this on the individual boxes 
+    */
+    #container > * {
+      animation-name: rotate;
+      animation-timing-function: linear;
+    }
+
+    .red {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: red;
+      opacity: 0.75;
+
+      /* the red outer box takes the longest time 
+        to take a full turn...*/
+      animation-duration: 5s;
+      animation-iteration-count: 5;
+    }
+
+
+    /* the green middle box takes a little bit less time 
+        to take a full turn...*/
+    .green {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      top: 12.5px;
+      left: 12.5px;
+      background: green;
+      opacity: 0.75;
+
+      animation-duration: 3s;
+      animation-iteration-count: 8;
+    }
+
+
+    /* the blue inner box takes the least time 
+        to take a full turn */
+    .blue {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 25px;
+      left: 25px;
+      background: blue;
+
+      animation-duration: 2s;
+      animation-iteration-count: 10;
+    }
+
+    @keyframes rotate {
+      
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercise</h1>
+  <p>Add the "rotate" animation to all boxes. Adapt it 
+    so each of the 3 boxes rotates with a different speed.
+  </p>
+
+  <div id="container">
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+  </div>
+
+</body>
+
+</html>

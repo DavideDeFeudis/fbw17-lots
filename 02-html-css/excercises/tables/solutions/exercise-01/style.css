@@ -1,0 +1,12 @@
+table{
+  border: 4px black solid;
+}
+
+th, td{
+  border: 1px black solid;
+  padding: 15px;
+}
+
+img {
+    width: 150px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations - Exercise #5 - YouTube Vid 3D</title>
+  <style>
+
+    /* apply perspective / 3D vision to our youtube video
+
+      Keep in mind:
+      To apply perspective on something transformed (e.g. a rotation object)
+      you need to set the perspective property 
+      on a PARENT of the transformed / rotated thing 
+     */
+
+    body {
+      margin: 0;
+      height: 100vh;
+
+      /* this centers the youtube frame in our container */ 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #ff63a1;
+    }
+
+    /* this is the container for our youtube player */
+    main {
+      border: 5px solid #fdffca;
+      height: 70vh;
+      width: 50vw;
+
+      border-radius: 5px; /* slightly rounded corners */
+
+      /* rotate our youtube container here... */
+
+      /* apply multiple box shadows here for a nice 3D depth effect 
+        tipp: use a slight, solid (not blurred) box shadow as the first shadow
+              and a bigger, more blurred second shadow with transparent color
+      */
+    }
+
+    /* on hovering: make the main tag "flat" again (undo the rotation). 
+    also overwrite the box shadow on hover. It should just get one slim, transparent shadow
+    */
+    main:hover {
+
+    }
+
+
+    /* the iframe which holds our youtube video. We do not need to 
+       change anything here... */
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <iframe src="https://www.youtube.com/embed/32kJ23O9Wbk" frameborder="0" allowfullscreen>
+    </iframe>
+  </main>
+
+
+</body>
+
+</html>

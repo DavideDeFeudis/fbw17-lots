@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+main {
+	width: 85%;
+	margin: 2rem auto;
+}
+
+td, th{
+	padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+}
+
+/* default background style: darkgray */
+.table tr th{
+	background: #888888;
+	text-align: left;
+	color: #ffffff; /* this color is applied to the borders! */
+}
+
+/* set a light grey for every uneven / odd row */
+.table tr:nth-child(odd) td {
+  background: #efefef;
+}
+	
+/* set a slight dark grey for every second row*/
+.table tr:nth-child(even) td {
+  background: #c0c0c0;
+}  
+
+/* select every third row, starting from the fourth one
+	from these rows: select every 2nd td
+*/
+.table tr:nth-child(3n+4) td:nth-child(2) {
+  background: #ffbbbb;
+}
