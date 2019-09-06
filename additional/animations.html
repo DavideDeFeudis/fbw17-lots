@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .ball {
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+            border-radius: 50%;
+            left: 0;
+            bottom: 50vh;
+
+            transition: 1s 0.5s;
+            /* transition: 3s 1s linear; */
+            /* transition-timing-function: ease-out; */
+        }
+
+        .ball:hover {
+            /* transform: translatex(400px); */
+            transform: rotate(360deg);
+        }
+
+        .ground {
+            position: absolute;
+            top: 50vh;
+            width: 100%;
+            border: 10px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball">BALL</div>
+    <div class="ground"></div>
+
+
+</body>
+
+</html>

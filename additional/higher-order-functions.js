@@ -406,9 +406,215 @@
 
 // REDUCE
 
+// https://www.freecodecamp.org/forum/t/how-to-use-the-javascript-array-prototype-reduce-javascript-reduce-guide/14299
+// https://www.freecodecamp.org/forum/t/using-array-prototype-reduce-to-reduce-conceptual-boilerplate-for-problems-on-arrays/14687
+
 // const prices1 = [10, 20, 30, 40, 40, 60];
 // const totalPrices1 = prices1.reduce((total, n) => total + n);
 // totalPrices1
+
+
+// var flattened = [
+//     [0, 1],
+//     [2, 3],
+//     [4, 5]
+// ].reduce(function (a, b) {
+//     a
+//     b
+//     return a.concat(b);
+// }, []);
+// flattened
+
+
+
+
+// seems like if initial value is not provided it takes the first value and calls the function starting on the second value
+
+// If initialValue is not provided, the iteration will start at the second element in the array (at index 1), with accumulator equal to the first element in the array and currentValue equal to the second element.
+
+// function appendCurrent(previousValue, currentValue) {
+//     previousValue
+//     currentValue
+//     return previousValue + "::" + currentValue;
+// }
+
+// // Create an array.
+// var elements = ["abc", "def", 123, 456];
+
+// // Call the reduce method, which calls the callback function
+// // for each array element.
+// var result = elements.reduce(appendCurrent);
+
+// console.log(result);
+
+// or use:
+
+// var elements = ["abc", "def", 123, 456];
+// console.log(elements.join('::'));
+
+
+
+// exercise:
+
+// Transform an array of strings into a single object that shows how many times each string appears in the array.
+
+// output:
+// { 
+//     dog: 2, 
+//     chicken: 3, 
+//     cat: 1, 
+//     rabbit: 1 
+// }
+
+
+// var pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+
+// var petCounts = pets.reduce(function(obj, pet){
+//     if (!obj[pet]) {
+//         // if the pet doesn't yet exist as a property of the accumulator object, 
+//         //   add it as a property and set its count to 1
+//         obj[pet] = 1;
+//     } else {
+//         // pet exists, so increment its count
+//         obj[pet]++;
+//     }
+//     return obj; // return the modified object to be used as accumulator in the next iteration
+// }, {}); // initialize the accumulator as an empty object
+
+// console.log(petCounts); 
+
+
+
+
+// pets.forEach(pet => {
+// if (output[pet]) {
+//     output[pet]++;
+// } else {
+//     output[pet] = 1;
+// } 
+// });
+// console.log(output);
+
+
+
+
+
+// output:
+// [ 
+//     {dog: 2}, 
+//     {chicken: 3}, 
+//     {cat: 1}, 
+//     {rabbit: 1} 
+// ]
+
+// var pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+// let outputArr = [];
+
+// pets.forEach(pet => {
+//     let count = counter(pets, pet);
+//     let outputObj = {};
+//     outputObj[pet] = count;
+//     outputArr
+//     // let a = outputArr.includes(outputObj[pet])
+//     let a = outputArr.some(x => x)
+//     a    
+//     if (!outputArr.includes(outputObj)) {
+//         outputArr.push(outputObj);
+//     }
+// });
+
+// console.log(outputArr);
+
+// function counter(arr, str) {
+//     let count = 0;
+//     arr.forEach(item => {
+//         if (str === item) {
+//             count++;
+//         }
+//     });
+//     return count;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// counter function:
+// function f(array,value){
+//     var n = 0;
+//     for(i = 0; i < array.length; i++){
+//         if(array[i] == value){n++}
+//     }
+//     return n;
+// }
+
+// console.log(f(pets, 'chicken'));
+
+
+
+
+
+
+
+
+// let output = [];
+
+
+
+
+// pets.forEach(pet => {
+//     let obj = {};
+//     if (obj[pet]) {
+//         obj[pet]++;
+//     } else {
+//         obj[pet] = 1;
+//     }
+//     obj
+// });
+
+
+
+
+
+
+
+
+
+// let obj = {};
+// let output = pets.reduce((arr, pet) => {
+
+//     if (obj[pet]) {
+//         obj[pet]++;
+//     } else {
+//         obj[pet] = 1;
+//     }
+//     arr.push(obj);
+//     return arr;
+// }, []);
+// console.log(output);
+
+
+
+
+
+
+
+// OBJECT COMPARISON
+
+// let a = {dog: 2};
+// let b = {dog: 2};
+
+// console.log(JSON.stringify(a) === JSON.stringify(b));
+// console.log((a === b));
+
+
 
 
 
@@ -517,19 +723,6 @@
 
 
 
-
-
-
-
-
-
-
-
-///////////////////////////////////////////
-
-
-
-
 // let students = [
 //     { name: 'Rob1', interests: ['coding', 'entrepreneurship' ] },
 //     { name: 'Rob2', interests: ['football', 'ping pong', ] },
@@ -614,6 +807,21 @@
 
 
 // SPREAD OPERATOR - ARRAYS AND OBJECTS
+
+
+// let arr = [
+//     [0, 1],
+//     [2, 3],
+//     [4, 5]
+// ];
+// let output = [];
+
+// arr.forEach(item => {
+//     output.push(...item);    
+// });
+// output 
+
+
 
 // let students1 = [
 //     { name: 'Rob1', interests: ['entrepreneurship' ] },
