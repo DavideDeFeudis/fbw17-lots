@@ -1,7 +1,9 @@
 # Animations - Exercise #2 - Easy in and out
 
-Apply the timing functions ease-in and ease-out on two div boxes 
-and apply the transition on hover.
+Within the file index.html you find two div boxes.
+
+Apply the timing functions ease-in and ease-out on the two div boxes.
+Apply the transition on hover.
 
 Compare the effect of the two timing methods.
 

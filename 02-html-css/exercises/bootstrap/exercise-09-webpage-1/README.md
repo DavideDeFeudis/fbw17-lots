@@ -1,8 +1,8 @@
 # Bootstrap - Page Building - Exercise #1
 
-Create a simple page using bootstrap!
+Create a simple page using bootstrap.
 
-- Use the image found in the images file as a guide!
+See the mockup reference image below as a guide.
 
 Your page must include:
 

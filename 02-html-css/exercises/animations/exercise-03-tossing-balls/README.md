@@ -1,6 +1,6 @@
 # Animations - Exercise #3 - The ball collision
 
-Please realize the following collision on the boxes:
+Please realize the following collision on the balls:
 
 ![Result](result.gif)
 

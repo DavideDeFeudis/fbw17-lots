@@ -15,15 +15,16 @@ Make the image sections responsive like seen in the images below:
   - Wrapping sections on tablet
   - All next to each other on desktop
 - Keep in mind that you have to either set width or flex-basis on the flexbox children in order to limit their size in percent. Otherwise they will be greedy, taking as much space as possible.
+- Use @Content within the media query to be able to hand in CSS styles to your media queries
 
-Mobile View (500px):
+Mobile View (<= 500px):
 
 ![Mobile](result/mobile.png)
 
-Tablet View:
+Tablet View (>= 700px):
 
 ![Tablet](result/tablet.png)
 
-Desktop View:
+Desktop View (>= 900px):
 
 ![Desktop](result/desktop.png)

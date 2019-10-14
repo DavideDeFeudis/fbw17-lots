@@ -14,3 +14,6 @@ On hovering over the video it should become flat again:
 
 Result on hover (flat):
 ![Result hover](result_hover.png)
+
+Final result (animated):
+![Result animated](result.gif) 
