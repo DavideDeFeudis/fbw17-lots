@@ -220,32 +220,31 @@ Applications that provide live data in real time (= data in UI is updated very f
 
 #### Discussion forum
 
-- You have a main view with some discussion topics 
-- (something that interests you from real life)
+- You have a main view with discussion topics 
 - Each discussion topic can have multiple posts
 - And each post can have answers. And these answers can have answers again
 
 Key Concepts to learn:
-    - Tree structures (=Parents with children, that have children, that have children, etc)
-    - Practice Algorithm for “looping” through trees: Recursion
-    - Reading / writing JavaScript data from / to the filesystem
+- Tree structures (=Parents with children, that have children, that have children, etc)
+- Practice Algorithm for “looping” through trees: Recursion
+- Reading / writing JavaScript data from / to the filesystem
 
 Project kickoff instructions:
-    - Write a backend that
-        - provides an array of topics and all subtopics
-        - On load: It reads the topics from a file an loads it into the array 
-        - All changes to that arr are again saved to that file
-        - Offer a route to fetch a post with all of its subposts
-        - Offer a route to receive new incoming discussion entries /answers for a topic / post
-            - add the new discussion entrie into the topics array / topics file
-    - Write a frontend that
-        - Displays all main topics
-        - On click on a topic: show this topic with all sub-threads
-        - Indent the sub-answers correctly
-            - Use recursion to loop through all posts and subposts, building up the discussion tree
-        - Besides each post: Provide a button to reply to it
-        - On button click: Forward the user to a post answer page
-        - Post answer page: Provide a form to answer the post and a button “Submit answer”
+- Write a backend that
+    - provides an array of topics and all subtopics
+    - On load: It reads the topics from a file an loads it into the array 
+    - All changes to that arr are again saved to that file
+    - Offer a route to fetch a post with all of its subposts
+    - Offer a route to receive new incoming discussion entries /answers for a topic / post
+        - add the new discussion entrie into the topics array / topics file
+- Write a frontend that
+    - Displays all main topics
+    - On click on a topic: show this topic with all sub-threads
+    - Indent the sub-answers correctly
+        - Use recursion to loop through all posts and subposts, building up the discussion tree
+    - Besides each post: Provide a button to reply to it
+    - On button click: Forward the user to a post answer page
+    - Post answer page: Provide a form to answer the post and a button “Submit answer”
 
 ---
 
