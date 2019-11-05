@@ -43,7 +43,7 @@
 
 ## Entry level (1-3 days)
 
-    - Rock paper scissors with a browser UI
+### Rock paper scissors with a browser UI
         - In UI you pick a name and select a move
         - The opponents move will be a random move
         - Write the function to check who won
@@ -51,30 +51,34 @@
         - Bonus: Store the game result in the browser
         => research how to use local storage
 
-    - Terminal games (backend only)
-        - Research (foundation for all games): 
-            - the net package of node js
-            - how to open a port / create a socket
-            - how to listen to incoming calls
-            - how to listen to keyboard events
-            - how to write messages to a socket
+### Terminal games (backend only)
+   
+Research (foundation for all games): 
+    - the net package of node js
+    - how to open a port / create a socket
+    - how to listen to incoming calls
+    - how to listen to keyboard events
+    - how to write messages to a socket
 
-        - Rock paper scissors
-            - Setup a TCP game server
-            - On an incoming request: 
-                - Let the user choose a user name that will be shown a prefix to his messages, like to: [rob]: Hello
-                - you pick a move via stdin, player picks random move
+#### Rock paper scissors
 
-        - Terminal chat: 
-            - Simulate a chat between two parties via a socket
-            - Create a script tcp-server.js
-            - Create a script tcp-client.js
-            - On an incoming request: Write a chat welcome message
-            - On typing and sending a new chat message: Write the message to the socket so the other party receives it
-                - Both server and client can send and receive messages from the other party
-            - When client closes connection (via CTRL+C)
-                - Server should listen for the connection closing event
-                - Server should write the chat log to a file chat_history.txt
+- Setup a TCP game server
+- On an incoming request: 
+    - Let the user choose a user name that will be shown a prefix to his messages, like to: [rob]: Hello
+    - you pick a move via stdin, player picks random move
+
+#### Terminal chat
+
+- Simulate a chat between two parties via a socket
+- Create a script tcp-server.js
+- Create a script tcp-client.js
+- On an incoming request: Write a chat welcome message
+- On typing and sending a new chat message: Write the message to the socket so the other party receives it
+    - Both server and client can send and receive messages from the other party
+- When client closes connection (via CTRL+C)
+    - Server should listen for the connection closing event
+    - Server should write the chat log to a file chat_history.txt
+
 
 ## Medium (up to 2 weeks)
 
@@ -117,11 +121,13 @@
     - Export: generate a matrix of 15 x 30 fields with 100 bombs
 
 
+
 ### Real-Time Applications
 
 For all projects in this category: 
 - Research some introduction articles about the concept of WebSockets
 - Research the node library: socket.io
+
 
 #### News Feed
 
@@ -136,6 +142,7 @@ For all projects in this category:
         - Use socket.io to react to new incoming news. Add them in real-time to the DOM (no reload of the page)
 
 #### Chat Application
+
 - Setup a backend server that 
     - listens for chat events (via socket io)
         - a valid chat message must contain: the message and the user who wrote the message
@@ -165,6 +172,8 @@ For all projects:
 ## Advanced (long term – 2 weeks up to several months)
 
 ### Real Time data
+
+Applications that provide live data in real time (= data in UI is updated very frequently)
 
 #### The Stock trader
 
@@ -199,6 +208,7 @@ For all projects:
                 - On successful transaction: Add the amount to the customers cash balance
                 - Now they can buy stocks again
 
+
 ### Social Media
 
 #### Discussion forum
@@ -230,7 +240,10 @@ Project kickoff instructions:
         - On button click: Forward the user to a post answer page
         - Post answer page: Provide a form to answer the post and a button “Submit answer”
 
+
 ### Shop / Commercial
+
+Applications with a focus to make money: Shopping carts, ordering process, payment processing.
 
 #### Mini shop with checkout (fullstack)
 
@@ -286,6 +299,7 @@ Project kickoff instructions:
             - Research SMS APIs which provide some rate of free SMS sending
             - Send a SMS order confirmation to the users phone number
 
+
 ### Streaming
 
 #### Video course
@@ -335,6 +349,7 @@ Project kickoff instructions:
                 - Afterwards it will store the received token in localStorage
                 - => research what browser LocalStorage is and how to store data in the browser
 
+
 ### App development
 
 Learn how to create native web applications for the smartphone.
@@ -364,6 +379,7 @@ Learn how to create native web applications for the smartphone.
         - Payment processing on a mobile app 
             - => use the PayPal Test API
         - Send an Email with the pizza order confirmation
+
 
 ### Desktop Applications with Electron
 
