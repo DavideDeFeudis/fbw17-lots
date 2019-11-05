@@ -40,6 +40,7 @@
     - Desktop App for private data
     - Mobile Pizza Order App
 
+---
 
 ## Entry level (1-3 days)
 
@@ -79,6 +80,7 @@ Research (foundation for all games):
     - Server should listen for the connection closing event
     - Server should write the chat log to a file chat_history.txt
 
+---
 
 ## Medium (up to 2 weeks)
 
@@ -120,7 +122,7 @@ Research (foundation for all games):
     - Medium: generate a matrix of 15 x 15 fields with 40 bombs
     - Export: generate a matrix of 15 x 30 fields with 100 bombs
 
-
+---
 
 ### Real-Time Applications
 
@@ -155,6 +157,8 @@ For all projects in this category:
         - Prefix the message with the user who send the message
 
 
+---
+
 ### Desktop Applications (Electron)
 
 For all projects: 
@@ -168,6 +172,8 @@ For all projects:
 #### Rock-Paper-Scissors / Flappy Bird / Minesweeper
     - Implement one of these games as an Electron app
 
+
+---
 
 ## Advanced (long term – 2 weeks up to several months)
 
@@ -208,6 +214,7 @@ Applications that provide live data in real time (= data in UI is updated very f
                 - On successful transaction: Add the amount to the customers cash balance
                 - Now they can buy stocks again
 
+---
 
 ### Social Media
 
@@ -240,6 +247,7 @@ Project kickoff instructions:
         - On button click: Forward the user to a post answer page
         - Post answer page: Provide a form to answer the post and a button “Submit answer”
 
+---
 
 ### Shop / Commercial
 
@@ -299,6 +307,7 @@ Applications with a focus to make money: Shopping carts, ordering process, payme
             - Research SMS APIs which provide some rate of free SMS sending
             - Send a SMS order confirmation to the users phone number
 
+---
 
 ### Streaming
 
@@ -349,8 +358,9 @@ Applications with a focus to make money: Shopping carts, ordering process, payme
                 - Afterwards it will store the received token in localStorage
                 - => research what browser LocalStorage is and how to store data in the browser
 
+---
 
-### App development
+### Mobile app development
 
 Learn how to create native web applications for the smartphone.
 
@@ -381,6 +391,8 @@ Learn how to create native web applications for the smartphone.
         - Send an Email with the pizza order confirmation
 
 
+---
+
 ### Desktop Applications with Electron
 
 For all projects: 
@@ -408,6 +420,8 @@ Motivation for desktop apps:
 - After login you can see the list of your login accounts
 - Provide a possibility to add a new page with login information
 
+
+---
 
 ### Software Deployment with Docker
 
