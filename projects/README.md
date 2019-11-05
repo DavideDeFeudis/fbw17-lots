@@ -74,7 +74,8 @@
                 - Server should listen for the connection closing event
                 - Server should write the chat log to a file chat_history.txt
 
-Medium (up to 2 weeks):
+## Medium (up to 2 weeks)
+
     - Browser games
         - Flappy bird 
             - => showcase: https://flappybird.io/
@@ -144,7 +145,7 @@ Medium (up to 2 weeks):
             - Implement one of these games as an Electron app
 
 
-Advanced (long term – 2 weeks up to several months):
+## Advanced (long term – 2 weeks up to several months)
 
     - The Stock trader (realtime data)
         - Write an app that displays current DAX Stock prices in real time (use a fake service for that)
