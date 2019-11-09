@@ -2,7 +2,8 @@ html, body {
   margin: 0;
   border: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
@@ -18,7 +19,7 @@ h1 {
 }
 
 main {
-  margin: 0.5rem;
+  margin: .5rem;
 }
 
 .huge {
@@ -53,7 +54,7 @@ main {
 
 .tiny {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 0.5rem;
+  font-size: .5rem;
   color: green;
   margin-bottom: 2rem;
 }
@@ -65,3 +66,4 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 1rem;
 }
+/*# sourceMappingURL=style.css.map */
