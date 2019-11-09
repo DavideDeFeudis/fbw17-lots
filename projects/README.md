@@ -24,11 +24,12 @@
     - Rock paper scissors
     - Minesweeper
     - Flappy Bird
+    - Tetris
 
     Fullstack
     - Shopping cart
     - Mini-Shop with Checkout, Payment Processing and Order Email
-    - Social login
+    - Social login (Login via Facebook, Google, GitHub, etc)
 
     Real-Time / Streaming
     - Stock Trader
@@ -45,17 +46,18 @@
 ## Entry level (1-3 days)
 
 ### Rock paper scissors with a browser UI
-        - In UI you pick a name and select a move
-        - The opponents move will be a random move
-        - Write the function to check who won
-        - Display the winner and offer a new game
-        - Bonus: Store the game result in the browser
-        => research how to use local storage
+    - In UI you pick a name and select a move
+    - The opponents move will be a random move
+    - Write the function to check who won
+    - Display the winner and offer a new game
+    - Bonus: Store the game result in the browser
+    => research how to use local storage
 
 ### Terminal games (backend only)
    
 Research (foundation for all games): 
-    - the net package of node js
+    - terminology "Socket" and "TCP"
+    - the net package of node.js
     - how to open a port / create a socket
     - how to listen to incoming calls
     - how to listen to keyboard events
@@ -91,16 +93,16 @@ Research (foundation for all games):
 => showcase: https://flappybird.io/
 - Create a browser game with animations
 - Choose graphics from pixabay, unsplash or other free image resources
-- On mouse click and hitting the spacebar key: Move up the bird
+- On mouse click or hitting the spacebar key: Move up the bird
 - If the bird touches a tube: 
     - Catch this event & Quit the game
     - Grey out the display area and display “GameOver”
     - Offer a button “New Game”
 - On every passed tube: Count up the score
-- The move tubes you pass the more you gain
+- The more tubes you pass the more you gain
 - On game finish:
     - Store your scores for a player in the frontend:
-        - Let the user type in a player name (or offer to generate a random player name)
+        - Let the user type in a player name (or offer generation of a random player name)
         - Basic Version: Use LocalStorage to store data
         - Advanced Version: Use IndexedDB to store data
 
@@ -109,18 +111,20 @@ Research (foundation for all games):
             
 => showcase: http://minesweeperonline.com/
 - Build a UI – build an HTML matrix with 10 x 10 squares (might be an array :))
-    - Randomly place 10 bombs inside this matrix (these are hidden)
-- Once you start a game: Count the seconds and display them 
+    - Randomly place 10 bombs inside this matrix (the bombs are hidden)
+    - suggestion: use HTML data-attributes to store bomb status in the button
+        => research: HTML data-attribute
+- Once you start a game: Count the seconds and display them (=game time)
 - React to click events on a square
-- On a click: Evaluate if you clicked on a bomb
-- On a right click: Mark a field as a bomb 
-- If so: Game is lost
-- If not: Evaluate the “environment”. Do the surroundings have bombs? And how many? Write an algorithm that checks it. 
+    - On a click: Evaluate if you clicked on a bomb
+    - On a right click: Mark a field as a bomb
+- If bomb clicked: Game is lost
+- If no bomb clicked: Evaluate the “environment”. Do the surroundings have bombs? And how many? Write an algorithm that checks it.
 - Bonus:
     - You can play 3 levels: Beginner, Medium, Expert
     - Beginner: generate a matrix of 10 x 10 fields with 10 bombs
     - Medium: generate a matrix of 15 x 15 fields with 40 bombs
-    - Export: generate a matrix of 15 x 30 fields with 100 bombs
+    - Expert: generate a matrix of 15 x 30 fields with 100 bombs
 
 ---
 
@@ -183,13 +187,16 @@ Applications that provide live data in real time (= data in UI is updated very f
 
 #### The Stock trader
 
-- Write an app that displays current DAX Stock prices in real time (use a fake service for that)
+- Write an app that displays current DAX Stock prices in real time 
+    => the prices can be fake, no need to connect to a real stock price service here
 - Key concepts to learn
     - RealTime data with WebSockets / bidirectional data streams
     - Library Socket.io
     - Bonus:
         - Authentication
-        - PayPal API
+            - OAuth and Social Login
+        - PayPal Payment API
+        - Stripe Payment API
 - Project kickoff instructions
     - Write a backend which 
         - randomly increases / decreases prices for each stock every second
@@ -201,6 +208,7 @@ Applications that provide live data in real time (= data in UI is updated very f
         - Backend 
             - maintain customer portfolios of shares
             - add social login (via Facebook, Google or GitHub)
+                - suggestion: Start with GitHub social login and research the GitHub documentaiton how to do it
         - UI: 
             - Provide a Login for the user to see his portfolio
             - Portfolio: Allow buying and selling of shares to the current market price
@@ -208,7 +216,7 @@ Applications that provide live data in real time (= data in UI is updated very f
                 - Initialize this cash account with 1000 EUR 
                 - On buy / sell: Update the customers cash balance
             - If they do not have enough cash 
-                - they need to fill it up with new money from PayPal otherwise they cannot buy stocks anymore
+                - they need to fill it up with new money from PayPal or Creditcard otherwise they cannot buy stocks anymore
                 - The users can state the amount they want to transfer
                 - => use the either the PayPal Test API or the Stripe CreditCard Test API for that
                 - On successful transaction: Add the amount to the customers cash balance
@@ -236,7 +244,7 @@ Project kickoff instructions:
     - All changes to that arr are again saved to that file
     - Offer a route to fetch a post with all of its subposts
     - Offer a route to receive new incoming discussion entries /answers for a topic / post
-        - add the new discussion entrie into the topics array / topics file
+        - add the new discussion entry into the topics array / topics file
 - Write a frontend that
     - Displays all main topics
     - On click on a topic: show this topic with all sub-threads
@@ -275,7 +283,7 @@ Applications with a focus to make money: Shopping carts, ordering process, payme
     - Frontend
         - Provide a UI which lists all of your products.
         - Pick images for your products from a free image source: pixabay, unsplash, etc
-        - Idealy your product information comes from the backend. Fetch it via fetch() from the backend
+        - Ideally your product information comes from the backend. Fetch it via fetch() from the backend
         - For each product: Provide a buy button
         - On “buy Product” click: Call the route product/add
         - Store the returned session ID in a cookie => research how to do that with JavaScript
@@ -326,7 +334,7 @@ Applications with a focus to make money: Shopping carts, ordering process, payme
         - Login UI with email and password
         - Video course page listing all videos of the course
         - Video view page where you can watch a single video
-            - This page should contain a HTML5 video player (use the <video> tag)
+            - This page should contain a HTML5 video player (use the HTML \<video\> tag)
         - Serve all this UIs via a NodeJS HTTP or Express HTTP server
         - => Recommendation: HTTP server to really learn the fundamentals of frontend-	backend interaction
         - => Express is much easier in the long-run. But you have to learn it first
