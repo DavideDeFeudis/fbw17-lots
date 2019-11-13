@@ -1,0 +1,116 @@
+$section-background-color: red;
+$section-text-color: white;
+
+$link-hover-color: purple;
+$link-hover-font-weight: bold; 
+
+$card-heading-font-size: 1.5rem;
+$card-text-font-size: 1.1rem;
+$card-button-font-size: 1.3rem;
+
+$margin-bottom-section: 3.5rem;
+$margin-bottom-subsection: 2rem;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: $margin-bottom-section;
+  background-color: $section-background-color;
+  color: $section-text-color;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  text-align: center;
+  margin-bottom: $margin-bottom-section;
+}
+
+.card > button {
+  border: 0;
+  background: #ccc;
+}
+
+// .card > h4 {
+//   font-size: $card-heading-font-size;
+// }
+
+// .card > p {
+//   font-size: $card-text-font-size;
+// }
+
+// .card > button {
+//   font-size: $card-button-font-size;
+// }
+
+nav {
+  margin-bottom: 3rem;
+}
+
+nav > ul, footer > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+ul > li {
+  margin: 1rem;
+}
+
+ul a {
+  text-decoration: none;  
+}
+ul a:hover {
+  color: $link-hover-color;
+  font-weight: $link-hover-font-weight;
+}
+
+.portion > figure {
+  margin-bottom: $margin-bottom-subsection;
+}
+
+.portion > figure > img {
+  max-width: 100%; // limit the image so it cannot exceed its container
+}
+
+article, aside, section {
+  margin-bottom: $margin-bottom-subsection;
+}
+
+footer {
+  background-color: $section-background-color;
+  color: $section-text-color;
+}
+
+@media screen and (min-width: 600px) {
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: $margin-bottom-section;
+  }
+  .card {
+    margin: 0 1rem;
+  }
+
+  // make the "portion" (this section with the image & the text) 
+  // a flexbox => so image and text go next to each other
+  .portion {
+    display: flex;
+    align-items: center;
+  }
+  .portion > figure {
+    margin-right: 1rem; // give a little bit of spacing between image & text
+  }
+}

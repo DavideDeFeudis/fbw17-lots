@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Forms - #3 - Validation checkmarks (ticks)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+
+      display: grid;
+      place-items: center;
+    }
+
+    fieldset {
+      width: 30vw;
+      min-height: 40vh;
+      padding: 2em;
+    }
+
+    legend {
+      text-transform: uppercase;
+    }
+
+    input {
+      display: inline-block;
+      padding: 5px 0px;
+
+      background: transparent;
+      /* YOUR CODE: hide the red boxes on selection (=outline) */
+    }
+
+    .input-box {
+      display: flex; /* this makes the input a flex 
+        so we can control the alignment of input field icon  */
+      justify-content: space-between; /* this helps us to put 
+        the validation icon to the far right */
+      border-bottom: 1px solid #4caf50;
+      margin-bottom: 20px;
+    }
+
+    input[type=email],
+    input[type=password] {
+      border: 0;
+    }
+
+    input[type=button] {
+      margin-top: 10px;
+      width: 100%;
+      border: 2px solid #4caf50;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input:focus::placeholder {
+      font-weight: bold;
+    }
+
+    /*YOUR CODE HERE: adapt the selector so it selects
+      your font-awesome icon by the correct class name
+      (e.g. ".fas-checkmark", whatever icon you have chosen)
+    */
+    i {
+      font-size: 1.2em; /* 
+        tipp: 
+        The size of the icon - because it is a font (!) - can
+        be set using font-size.
+        In case the icon size does not match your input field 
+        height nicely you can play with the font-size value 
+        here... */
+      text-align: center;
+      vertical-align: middle;
+      /* YOUR CODE HERE: make the icon invisible by default */
+    }
+
+    /* YOUR CODE HERE: 
+    make the icon (i tag) visible on validation
+    Apply both the :valid selector and a sibling selector to 
+    select the adjacent icon (=> use the + selector for that)
+    */
+
+
+  </style>
+</head>
+
+<body>
+
+  <fieldset>
+      <legend>Login! We want your data</legend>
+
+      <div class="input-box">
+        <input type="email" 
+          name="email" id="email" 
+          autocomplete="off"
+          placeholder="Your email...">
+          <!-- place the font awesome tick icon here ...-->
+      </div>
+
+      <div class="input-box">
+        <input type="password" 
+          name="password" id="password" 
+          placeholder="Your password...">
+          
+          <!-- put a pattern on the password box
+            we need our password to be at least 6 characters
+            and maximum 10 characters
+          -->
+          <!-- place the font awesome tick icon here ...-->
+        </div>
+      <input type="button" value="Login">
+    
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+nav > ul {
+    height: 4rem;
+}
+
+li {
+    list-style: none;
+    padding: 1rem;
+}
+
+nav a {
+    color: #0e749e;
+}
+
+a {
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    height: 20rem;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+header > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+
+.img-mountain {
+}
+
+.img-surfer {
+}
+
+.img-tree {
+}
+
+
+.img {
+    height: 10rem;
+    width: 100%;
+}
+
+/* both - the cards container and a single card - have something in common.
+    They flip the direction of their children on certain breakpoints.
+    So they both are.... ? Setup the corresponding style here....
+*/
+.cards, .card {
+}
+
+.card {
+    padding: 1rem;
+    background-color: #e0ddb2;
+    margin: 1rem;
+    border: 2px solid #dad6ab;
+    border-radius: 5px;
+}
+
+.card-text {
+    padding-top: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    margin: 1rem;
+}
+
+aside, article {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+aside {
+    border: 2px solid #dad6ab;
+}
+
+footer > ul {
+    height: 4rem;
+    background-color: #016690;
+}
+
+
+footer a {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+    .card {
+    }
+
+    .card-text {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    nav > ul {
+    }
+
+    main {
+    }
+
+    article {
+    }
+
+    aside {        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .cards {
+    }
+
+    .card {
+    }
+
+    .img {
+    }
+   
+    .card-text {
+    }
+}

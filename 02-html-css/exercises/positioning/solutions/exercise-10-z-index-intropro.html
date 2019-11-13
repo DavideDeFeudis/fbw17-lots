@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning - Z-Index #1 (Advanced)</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      margin: 10vh 10vw;
+      border: 1px solid;
+      position: relative;
+    }
+
+    .container > div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      box-shadow: 10px 10px 0px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    #div1 {
+      top: 0%;
+      left: 0;
+      background: yellow;
+    }
+
+    #div2 {
+      top: 0%;
+      right: 0%;
+      background: red;
+    }
+
+    #sub-container {
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      height: 50%;
+      z-index: 1;
+      /*this is necessary to "protect" the children 
+        which have a negative z-index to go below all other boxes */
+    }
+
+    #div3 {
+      position: absolute;
+      /* place the parent 20px inwards to create some empty frame around. 
+      This frame could be filled by the child*/
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+    }
+
+    #div4 {
+      position: absolute;
+      /* let the child extend its parent by 20px. This way it can fill in the gap */
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: purple;
+      z-index: -1;
+      /* move box below the green div3, so we can see it */
+    }
+
+    #div5 {
+      bottom: 0;
+      left: 0;
+      background: blue;
+      z-index: -1;
+      /* keep box below sub-container */
+    }
+
+    #div6 {
+      bottom: 0;
+      right: 0;
+      background: grey;
+      z-index: -1;      
+      /* keep box below sub-container */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="div1">Box #1</div>
+    <div id="div2">Box #2</div>
+    <div id="sub-container">
+      <div id="div3">Box #3
+        <div id="div4">Box #4</div>
+      </div>
+    </div>
+    <div id="div5">Box #5</div>
+    <div id="div6">Box #6</div>
+  </div>
+
+</body>
+
+</html>

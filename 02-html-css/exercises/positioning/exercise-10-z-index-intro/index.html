@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Positioning - Z-Index #1</title>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      margin: 10vh 10vw;
+      border: 1px solid;
+      position: relative;
+    }
+
+    .container > div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+    }
+
+    #div1 {
+      top: 0%;
+      left: 0;
+      background: yellow;
+    }
+
+    #div2 {
+      top: 0%;
+      right: 0%;
+      background: red;
+    }
+
+    #sub-container {
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      height: 50%;
+    }
+
+    #div3 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      background: green;
+    }
+
+    #div4 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background: purple;
+    }
+
+    #div5 {
+      bottom: 0;
+      left: 0;
+      background: blue;
+    }
+
+    #div6 {
+      bottom: 0;
+      right: 0;
+      background: grey;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="div1">Box #1</div>
+    <div id="div2">Box #2</div>
+    
+    <!--
+      Please keep in mind, that putting a z-index on a parent 
+      causes that children can not go behind the parent anymore.
+      They get locked into the parent.
+      So find the right way to bring box #4 on top of box #3
+    -->
+    <div id="sub-container">
+      <div id="div3">Box #3
+        <div id="div4">Box #4</div>
+      </div>
+    </div>
+    
+    <div id="div5">Box #5</div>
+    <div id="div6">Box #6</div>
+  </div>
+
+</body>
+
+</html>

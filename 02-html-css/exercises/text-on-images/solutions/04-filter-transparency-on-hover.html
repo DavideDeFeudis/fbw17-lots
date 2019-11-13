@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise #3 - Image filter on hovering with a pseudo background</title>
+  <style>
+
+    *
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .cards-container {
+      display: flex; /* align all cards in the container next to each other
+       => flex makes this easy */
+    }
+
+    /* this card takes the black background. 
+       On top of it are placed the unsplash image + the card title */
+    .card {
+      
+      background-color: black;
+      width: 150px;
+      height: 150px;
+      margin: 20px;
+      border: 1px solid;
+
+      /* use flex to center the H2 headline within the card */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative; /* make it an anchor point for our pseudo elements*/
+
+    }
+
+    /* this holds the real image that is placed on top of the black background 
+      it just covers the card container completely
+    */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-image: url(//unsplash.it/150/150);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .card-title {
+      position: relative;
+      padding: 10%; /* we indent the title a bit, so the overlay goes nicely around it */
+
+      visibility: hidden; /* card title is invisibly by default 
+        and just made visible on hover */
+
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      text-align: center;
+    }
+
+    /* show the card title on hover */
+    .card:hover .card-title {
+      visibility: visible;
+    }
+
+    /* show the white box overlay on hover 
+       We use the pseudo element ::after to display it
+    */
+    .card:hover::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      border: 1px solid white;
+    }
+
+    /* make the second image a bit transparent on hover */
+    #card-2:hover::before {
+      opacity: 0.5;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2>The nested backgrounds with color-filter on hover</h2>
+  <p>When hovering over an image: Show the card title + a pseudo box around</p>
+  <p>When hovering over image 2: Please make the image transparent a bit against it's background container. So the text becomes much more readable</p>
+
+  <div class="cards-container">
+
+    <div class="card" id="card-1">
+      <div class="card-title">Well done CSS master!</div>
+    </div>
+    
+    <div class="card" id="card-2">
+      <div class="card-title">Well done CSS master!</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

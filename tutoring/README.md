@@ -83,11 +83,11 @@ could be recapped.
   - order
 
 - CSS Grid
-  - Spanning up a grid: 
+  - Spanning up a grid:
     - grid-template-columns
     - grid-template-rows
     - grid-auto-rows
-  - Placing items / spanning up grid areas: 
+  - Placing items / spanning up grid areas:
     - grid-column-start / grid-column-end
     - grid-row-start / grid-row-end
     - Shorthands: grid-column & grid-row
@@ -119,11 +119,17 @@ could be recapped.
   - reduce
   - map
 - Decisions
-  - If / Else 
+  - If / Else
   - Switch / Case
 - Loops
   - While
   - For
   - Nested loops
   - Break / continue
-- 
+- Functions
+  - Parameters
+  - Return
+  - Callbacks
+  - Arrow Functions
+- Method Chaining
+

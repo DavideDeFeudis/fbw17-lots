@@ -1,0 +1,91 @@
+// box sizing styles
+$header-footer-height: 10rem;
+// alignment styles
+$header-footer-text-align: center;
+
+// font styles
+$font-sans-serif: Arial, Helvetica, sans-serif; 
+$font-sans-serif-lucida: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+$font-sans-serif-franklin: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$font-serif: 'Times New Roman', Times, serif;
+$font-size-medium: 3rem;
+
+
+// color styles
+$color-yellow: rgba(255, 255, 0, 0.39);
+$color-blue: blue;
+$color-purple: purple;
+$color-green: green;
+
+
+
+html, body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: $header-footer-height; 
+    background-color: $color-yellow;
+    text-align: $header-footer-text-align;
+    padding-top: 2rem;
+    font-family: $font-sans-serif;
+}
+
+h1 {
+    font-family: $font-sans-serif;
+}
+
+main {
+    margin: .5rem;
+}
+
+.huge {
+    font-family: $font-serif;
+    font-size: 10rem;
+    color: $color-blue;
+}
+
+
+.big {
+    font-family: $font-serif;
+    font-size: 8rem;
+    color: $color-blue;
+}
+
+.medium {
+    font-family: $font-sans-serif-lucida;
+    font-size: $font-size-medium;
+    color: $color-purple;
+}
+
+.middle {
+    font-family: Georgia, $font-serif;
+    font-size: $font-size-medium;
+    color: $color-purple;
+}
+
+
+.small {
+    font-family: $font-sans-serif-franklin;
+    font-size: 2rem;
+    color: $color-green;
+}
+
+.tiny {
+    font-family: $font-sans-serif-franklin;
+    font-size: .5rem;
+    color: $color-green;
+    margin-bottom: 2rem;
+}
+
+footer {
+    height: $header-footer-height;
+    background-color: $color-yellow;
+    text-align: $header-footer-text-align;
+    font-family: $font-sans-serif;
+    padding-top: 1rem;
+}
+

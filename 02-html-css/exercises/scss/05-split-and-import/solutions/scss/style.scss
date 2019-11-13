@@ -1,0 +1,79 @@
+@import 'fonts';
+@import 'colors';
+
+// box sizing styles
+$header-footer-height: 10rem;
+// alignment styles
+$header-footer-text-align: center;
+
+
+html, body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: $header-footer-height; 
+    background-color: $color-theme-bg;
+    text-align: center;
+    padding-top: 2rem;
+    font-family: $font-sans-serif-default;
+}
+
+h1 {
+    font-family: $font-sans-serif-default;
+}
+
+main {
+    margin: .5rem; 
+}
+
+.huge {
+    font-family: $font-serif-default;
+    font-size: 10rem;
+    color: $color-theme-blue;
+}
+
+
+.big {
+    font-family: $font-serif-default;
+    font-size: 8rem;
+    color: $color-theme-blue;
+}
+
+.medium {
+    font-family: $font-sans-serif-lucida;
+    font-size: $font-size-medium;
+    color: $color-theme-purple;
+}
+
+.middle {
+    font-family: Georgia, $font-serif-default;
+    font-size: $font-size-medium;
+    color: $color-theme-purple;
+}
+
+
+.small {
+    font-family: $font-sans-serif-franklin;
+    font-size: 2rem;
+    color: $color-theme-green;
+}
+
+.tiny {
+    font-family: $font-sans-serif-franklin;
+    font-size: .5rem;
+    color: $color-theme-green;
+    margin-bottom: 2rem;
+}
+
+footer {
+    height: $header-footer-height;
+    background-color: $color-theme-bg;
+    text-align: center;
+    font-family: $font-sans-serif-default;
+    padding-top: 1rem;
+}
+

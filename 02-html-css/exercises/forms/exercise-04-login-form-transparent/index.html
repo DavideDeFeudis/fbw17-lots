@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise Forms - #4 - Login form on transparent background</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+
+      /*
+        Apply multiple backgrounds:
+        Top background: a linear gradient with transparency: 
+        e.g. linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+        Bottom background: an image from unsplash.
+        The background should cover the entire screen
+      */
+
+    }
+
+    main {
+      width: 20vw;
+    }
+
+    h1 {
+
+    }
+
+    input {
+      display: inline-block;
+      padding: 5px 0px;
+    }
+
+    .input-box {
+
+    }
+
+    /* some CSS for controlling the fontawesome icon */
+    i.fas {
+      width: 20px;
+      text-align: center;
+    }
+
+    input[type=text],
+    input[type=password] {
+
+    }
+
+    input[type=button] {
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Login</h1>
+
+    <div class="input-box">
+      <input type="text" name="email" 
+        autocomplete="off"
+        placeholder="Your email...">
+    </div>
+    <div class="input-box">
+      <input type="password" name="password" 
+        autocomplete="off"
+        placeholder="Your password...">
+    </div>
+    <input type="button" value="Sign in">
+
+  </main>
+
+</body>
+
+</html>
